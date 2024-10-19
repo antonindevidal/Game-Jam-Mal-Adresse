@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj6eesxqpad45"]
+
+[ext_resource type="Script" path="res://Scripts/Level.gd" id="1_nr7ws"]
+[ext_resource type="PackedScene" uid="uid://cg1pgl7dxjhfj" path="res://Scenes/UI/LevelUi.tscn" id="1_w7qxa"]
+[ext_resource type="MeshLibrary" uid="uid://rjysh0cisd0j" path="res://Resources/MeshLibrairy/WorldLibrary.tres" id="2_nqvwi"]
+[ext_resource type="MeshLibrary" uid="uid://qxkdtdey5x5i" path="res://Resources/MeshLibrairy/RailsLibrairy.tres" id="3_lilda"]
+
+[node name="Level1" type="Node3D"]
+script = ExtResource("1_nr7ws")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707106, 0.707106, 0, -0.707106, 0.707106, 0, 7.415, 3.1)
+
+[node name="World" type="GridMap" parent="."]
+mesh_library = ExtResource("2_nqvwi")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(0, 65535, 1, 65535, 65535, 1, 65535, 0, 1, 0, 0, 1, 65534, 65535, 1, 65534, 0, 1, 65535, 1, 1, 0, 1, 1, 1, 0, 1, 1, 65535, 1, 1, 1, 1, 65534, 1, 1, 65533, 65533, 1, 65534, 65533, 1, 65535, 65533, 1, 1, 65533, 1, 1, 65534, 1, 2, 65534, 1, 3, 65533, 1, 4, 65533, 1, 4, 65534, 1, 5, 65534, 1, 4, 65535, 1, 4, 0, 1, 3, 0, 1, 3, 1, 1, 2, 0, 1, 2, 65535, 1, 3, 65534, 1, 2, 1, 1, 3, 65535, 1, 65533, 0, 1, 65533, 1, 1, 65533, 65535, 1, 65533, 65534, 1, 65534, 65534, 1, 65535, 65534, 1, 0, 65534, 1, 0, 65533, 1, 0, 65532, 1, 1, 65532, 1, 2, 65533, 1, 5, 65533, 1, 4, 1, 1, 5, 0, 1, 5, 65535, 1, 5, 1, 1)
+}
+
+[node name="RailGrid" type="GridMap" parent="."]
+mesh_library = ExtResource("3_lilda")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelUi" parent="CanvasLayer" instance=ExtResource("1_w7qxa")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.827571, 0.561361, 0, -0.561361, 0.827571, 0, 3.57485, 0)
+
+[connection signal="select_item" from="CanvasLayer/LevelUi" to="." method="on_item_selected"]

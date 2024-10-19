@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://phiplebig0jq"]
+
+[ext_resource type="Shader" path="res://Shaders/SkyShader.gdshader" id="1_fndvp"]
+
+[resource]
+shader = ExtResource("1_fndvp")
+shader_parameter/sky_color = Color(0, 0.5, 0.75, 1)
