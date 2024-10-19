@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg1pgl7dxjhfj"]
+[gd_scene load_steps=6 format=3 uid="uid://cg1pgl7dxjhfj"]
 
 [ext_resource type="Script" path="res://Scripts/LevelUi.gd" id="1_o5y1v"]
 [ext_resource type="Texture2D" uid="uid://c7j8562i2squu" path="res://Resources/Icons/Rail.png" id="2_4guen"]
-[ext_resource type="PackedScene" uid="uid://bctsftvg5wpiq" path="res://Resources/Models/Trains/track-detailed.glb" id="2_wda42"]
+[ext_resource type="PackedScene" uid="uid://bctsftvg5wpiq" path="res://Resources/Models/Rail/track-detailed.glb" id="2_wda42"]
 [ext_resource type="Texture2D" uid="uid://yniwf1cpohru" path="res://Resources/UI/Rectangle-Border.png" id="3_5oqu6"]
+[ext_resource type="Texture2D" uid="uid://c0syucjr5aebl" path="res://Resources/UI/Play.png" id="5_il0g2"]
 
 [node name="LevelUi" type="Control" node_paths=PackedStringArray("ItemBar")]
 layout_mode = 3
@@ -44,4 +45,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_4guen")
 
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+offset_right = 128.0
+offset_bottom = 128.0
+texture_normal = ExtResource("5_il0g2")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="ItemBar/Rail" to="." method="on_item_click" binds= [0]]
+[connection signal="pressed" from="TextureButton" to="." method="_on_play"]

@@ -1,9 +1,9 @@
 [gd_resource type="MeshLibrary" load_steps=31 format=4 uid="uid://1sxkutuqlxv6"]
 
-[ext_resource type="Texture2D" uid="uid://dwsktsatnjqhk" path="res://Resources/Models/Trains/track-detailed_colormap.png" id="1_j6ltu"]
-[ext_resource type="Texture2D" uid="uid://dl5dclv7byl1f" path="res://Resources/Models/Trains/track-corner_colormap.png" id="2_nxv5x"]
-[ext_resource type="Texture2D" uid="uid://c7cd7kh6goc1f" path="res://Resources/Models/Trains/cross3_colormap.png" id="3_nqchn"]
-[ext_resource type="Texture2D" uid="uid://dc5sat0xg6wnl" path="res://Resources/Models/Trains/cross4_colormap.png" id="4_cnyiw"]
+[ext_resource type="Texture2D" uid="uid://dwsktsatnjqhk" path="res://Resources/Models/Rail/track-detailed_colormap.png" id="1_j6ltu"]
+[ext_resource type="Texture2D" uid="uid://dl5dclv7byl1f" path="res://Resources/Models/Rail/track-corner_colormap.png" id="2_nxv5x"]
+[ext_resource type="Texture2D" uid="uid://c7cd7kh6goc1f" path="res://Resources/Models/Rail/cross3_colormap.png" id="3_nqchn"]
+[ext_resource type="Texture2D" uid="uid://dc5sat0xg6wnl" path="res://Resources/Models/Rail/cross4_colormap.png" id="4_cnyiw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dbr1b"]
 resource_name = "colormap.006"

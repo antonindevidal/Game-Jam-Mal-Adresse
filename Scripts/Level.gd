@@ -7,10 +7,51 @@ var selected_item : Node3D = null
 @onready var worldGrid : GridMap = $World
 @onready var railGrid : GridMap = $RailGrid
 
+@export var trains : Array[Node3D] = []
+@export var startPos : Array[Vector3i]
+@export var endPos : Array[Vector3i]
+
+var is_playing : bool = false
+
+var lastStartPos : Vector3
+var nextDestPos : Vector3
+var currentTravelTime : float
+var totalTravelTime = 0.2
+
 var offSet : Vector3 = Vector3(0.5,0,0.5)
 
-func _process(_delta):
-	if selected_item != null:
+var neighboors : Array[Vector3i] = [
+	Vector3i(0,0,-1),
+	Vector3i(1,0,0),
+	Vector3i(0,0,1),
+	Vector3i(-1,0,0)
+]
+
+func _ready():
+	railGrid.set_cell_item(startPos[0],0,16)
+	railGrid.set_cell_item(endPos[0],0,16)
+	var t = trains[0]
+	t.position = railGrid.map_to_local(startPos[0])
+
+func _process(delta):
+	if is_playing :
+		var trainPos = trains[0].position
+		
+		currentTravelTime += delta;
+		var progress = currentTravelTime / totalTravelTime
+		
+		if(progress >= 1):
+			if(railGrid.local_to_map(trainPos) == endPos[0]):
+				is_playing = false
+			var newDest = get_next_cell(nextDestPos, lastStartPos)
+			lastStartPos = nextDestPos
+			nextDestPos = newDest
+			currentTravelTime = 0.0
+			progress = 0
+			
+		trains[0].position = lastStartPos + progress * (nextDestPos - lastStartPos)
+
+	elif selected_item != null:
 		selected_item.position = get_cell_under_mouse()
 		selected_item.position += offSet
 		
@@ -43,6 +84,7 @@ func get_cell_under_mouse() -> Vector3i:
 
 func get_rail_model_index(cell_pos : Vector3i) -> Array[int]:
 	var n : int = 0
+
 	var cell = railGrid.get_cell_item(cell_pos+Vector3i(0,0,-1))
 	if(-1 < cell && cell < 4): n += 1
 	cell = railGrid.get_cell_item(cell_pos+Vector3i(1,0,0))
@@ -99,3 +141,25 @@ func UpdateNeighboors(cell_pos : Vector3i):
 	if(cell >= 0):
 		c = get_rail_model_index(p)
 		railGrid.set_cell_item(p, c[0], c[1])
+
+
+func _on_play():
+	lastStartPos = railGrid.map_to_local(startPos[0])
+	nextDestPos = get_next_cell(lastStartPos, lastStartPos)
+	currentTravelTime = 0.0
+	is_playing = true
+
+func norm2(vector: Vector3) -> float:
+	return sqrt((vector.x*vector.x)+(vector.x*vector.x)+(vector.x*vector.x))
+
+func get_next_cell(oldCell : Vector3, lastStart : Vector3) -> Vector3:
+	var cell : Vector3i = railGrid.local_to_map(oldCell)
+	var nextCell : Vector3i = Vector3.ZERO
+	var avoid : Vector3i = railGrid.local_to_map(lastStart)
+	
+	for n : Vector3i in neighboors:
+		var p : Vector3i = cell+n
+		var neighboor = railGrid.get_cell_item(p)
+		if(neighboor >= 0 && p != avoid):
+			nextCell = p
+	return railGrid.map_to_local(nextCell)
