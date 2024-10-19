@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cddyhw53ea065"
-path="res://.godot/imported/cross4.glb-a0481f27111e9c115d831b33eef0019c.scn"
+uid="uid://dg5h0wb8ey8br"
+path="res://.godot/imported/cross3-L.glb-717c86bfe0cbd29113924e4352a4a2d8.scn"
 
 [deps]
 
-source_file="res://Resources/Models/Rail/cross4.glb"
-dest_files=["res://.godot/imported/cross4.glb-a0481f27111e9c115d831b33eef0019c.scn"]
+source_file="res://Resources/Models/Rail/cross3-L.glb"
+dest_files=["res://.godot/imported/cross3-L.glb-717c86bfe0cbd29113924e4352a4a2d8.scn"]
 
 [params]
 

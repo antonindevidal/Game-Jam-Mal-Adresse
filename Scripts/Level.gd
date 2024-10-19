@@ -85,14 +85,16 @@ func get_cell_under_mouse() -> Vector3i:
 func get_rail_model_index(cell_pos : Vector3i) -> Array[int]:
 	var n : int = 0
 
+	var maxRail = 5;
+
 	var cell = railGrid.get_cell_item(cell_pos+Vector3i(0,0,-1))
-	if(-1 < cell && cell < 4): n += 1
+	if(-1 < cell && cell < maxRail): n += 1
 	cell = railGrid.get_cell_item(cell_pos+Vector3i(1,0,0))
-	if(-1 < cell && cell < 4): n += 2
+	if(-1 < cell && cell < maxRail): n += 2
 	cell = railGrid.get_cell_item(cell_pos+Vector3i(0,0,1))
-	if(-1 < cell && cell < 4): n += 4
+	if(-1 < cell && cell < maxRail): n += 4
 	cell = railGrid.get_cell_item(cell_pos+Vector3i(-1,0,0))
-	if(-1 < cell && cell < 4): n += 8
+	if(-1 < cell && cell < maxRail): n += 8
 	
 	var c : int = 0
 	var r : int = 0
@@ -102,8 +104,8 @@ func get_rail_model_index(cell_pos : Vector3i) -> Array[int]:
 	var cross3 = [7,11,13,14]
 	
 	if corner.has(n) : c = 1
-	elif cross3.has(n) : c = 2
-	elif n == 15: c = 3
+	elif cross3.has(n) : c = 3
+	elif n == 15: c = 4
 	
 	#rotation de la cellule
 	var r90 = [2,3,8,10,11]

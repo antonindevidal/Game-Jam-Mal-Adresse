@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_nr7ws"]
 [ext_resource type="PackedScene" uid="uid://cg1pgl7dxjhfj" path="res://Scenes/UI/LevelUi.tscn" id="1_w7qxa"]
 [ext_resource type="MeshLibrary" uid="uid://rjysh0cisd0j" path="res://Resources/MeshLibrairy/WorldLibrary.tres" id="2_nqvwi"]
-[ext_resource type="MeshLibrary" uid="uid://1sxkutuqlxv6" path="res://Resources/MeshLibrairy/RailsLibrary.tres" id="4_hyclq"]
+[ext_resource type="MeshLibrary" uid="uid://g6sdytyf1xvj" path="res://Resources/MeshLibrairy/RailsLibrary.tres" id="4_hyclq"]
 [ext_resource type="PackedScene" uid="uid://cyhls8uowy3xt" path="res://Resources/Models/Trains/train-diesel-a.glb" id="5_q387l"]
 
 [node name="Level1" type="Node3D" node_paths=PackedStringArray("trains")]
