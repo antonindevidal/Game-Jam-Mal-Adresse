@@ -1,991 +1,313 @@
-[gd_scene load_steps=330 format=3 uid="uid://c1nwe2akwgc83"]
+[gd_scene load_steps=104 format=3 uid="uid://bh8lao8eocmg"]
 
-[ext_resource type="PackedScene" uid="uid://by0gap8s8q0xy" path="res://Models/World/bed.glb" id="1_bfh8s"]
-[ext_resource type="PackedScene" uid="uid://b8pl8ypfhx3rr" path="res://Models/World/bed_floor.glb" id="2_mycum"]
-[ext_resource type="PackedScene" uid="uid://km1scxbnxsgj" path="res://Models/World/bridge_center_stone.glb" id="3_pptmn"]
-[ext_resource type="PackedScene" uid="uid://crwpxo8ertdmq" path="res://Models/World/bridge_center_stoneRound.glb" id="4_fwwk1"]
-[ext_resource type="PackedScene" uid="uid://clfls1udxt4b1" path="res://Models/World/bridge_center_wood.glb" id="5_eqh0a"]
-[ext_resource type="PackedScene" uid="uid://cruqxwg8ncdww" path="res://Models/World/bridge_center_woodRound.glb" id="6_a63ha"]
-[ext_resource type="PackedScene" uid="uid://bsx1rj0x0yiic" path="res://Models/World/bridge_side_stone.glb" id="7_yorgy"]
-[ext_resource type="PackedScene" uid="uid://vyyh7n4japxy" path="res://Models/World/bridge_side_stoneRound.glb" id="8_yu3c1"]
-[ext_resource type="PackedScene" uid="uid://dj665kjtd2yao" path="res://Models/World/bridge_side_wood.glb" id="9_8kcpy"]
-[ext_resource type="PackedScene" uid="uid://bpwbpa2oeyhir" path="res://Models/World/bridge_side_woodRound.glb" id="10_rmvug"]
-[ext_resource type="PackedScene" uid="uid://betyf1ptdn6r3" path="res://Models/World/bridge_stone.glb" id="11_4kxs5"]
-[ext_resource type="PackedScene" uid="uid://cx1k0gmtyk4nl" path="res://Models/World/bridge_stoneNarrow.glb" id="12_spu8k"]
-[ext_resource type="PackedScene" uid="uid://8tjsmj0m26y6" path="res://Models/World/bridge_stoneRound.glb" id="13_qh468"]
-[ext_resource type="PackedScene" uid="uid://crf0sbad7hvpj" path="res://Models/World/bridge_stoneRoundNarrow.glb" id="14_bwdaa"]
-[ext_resource type="PackedScene" uid="uid://db583v40pobmg" path="res://Models/World/bridge_wood.glb" id="15_1rnvf"]
-[ext_resource type="PackedScene" uid="uid://c1q0ktpg833tb" path="res://Models/World/bridge_woodNarrow.glb" id="16_pw5dg"]
-[ext_resource type="PackedScene" uid="uid://1kl5o2q8o84m" path="res://Models/World/bridge_woodRound.glb" id="17_vbn3s"]
-[ext_resource type="PackedScene" uid="uid://86tywhkfb7r2" path="res://Models/World/bridge_woodRoundNarrow.glb" id="18_u41qc"]
-[ext_resource type="PackedScene" uid="uid://ph8d6527c1fc" path="res://Models/World/cactus_short.glb" id="19_lx4tn"]
-[ext_resource type="PackedScene" uid="uid://b13ospdi87blf" path="res://Models/World/cactus_tall.glb" id="20_3og71"]
-[ext_resource type="PackedScene" uid="uid://ch02ug08sl50n" path="res://Models/World/campfire_bricks.glb" id="21_1bp5o"]
-[ext_resource type="PackedScene" uid="uid://drmbbd43g1yir" path="res://Models/World/campfire_logs.glb" id="22_obcn5"]
-[ext_resource type="PackedScene" uid="uid://byd73mtavafky" path="res://Models/World/campfire_planks.glb" id="23_iaq7j"]
-[ext_resource type="PackedScene" uid="uid://dahro4kvr3oak" path="res://Models/World/campfire_stones.glb" id="24_f21du"]
-[ext_resource type="PackedScene" uid="uid://c4n7gl7dlpkw5" path="res://Models/World/canoe.glb" id="25_g2tfo"]
-[ext_resource type="PackedScene" uid="uid://h67ocpr1xmvc" path="res://Models/World/canoe_paddle.glb" id="26_aatn4"]
-[ext_resource type="PackedScene" uid="uid://dnmgmih2w0erw" path="res://Models/World/cliff_blockCave_rock.glb" id="27_xh3n5"]
-[ext_resource type="PackedScene" uid="uid://cfhtr0obecwd" path="res://Models/World/cliff_blockCave_stone.glb" id="28_ke7yk"]
-[ext_resource type="PackedScene" uid="uid://c60564pwg8l40" path="res://Models/World/cliff_blockDiagonal_rock.glb" id="29_60oqm"]
-[ext_resource type="PackedScene" uid="uid://cuxl8oje4kaqt" path="res://Models/World/cliff_blockDiagonal_stone.glb" id="30_baw8x"]
-[ext_resource type="PackedScene" uid="uid://rf5dr16krk7e" path="res://Models/World/cliff_blockHalf_rock.glb" id="31_r7qu1"]
-[ext_resource type="PackedScene" uid="uid://bavanrtk425xp" path="res://Models/World/cliff_blockHalf_stone.glb" id="32_w7xat"]
-[ext_resource type="PackedScene" uid="uid://dwf7fnj0m2avg" path="res://Models/World/cliff_blockQuarter_rock.glb" id="33_qj6u4"]
-[ext_resource type="PackedScene" uid="uid://mqujrpxljdjj" path="res://Models/World/cliff_blockQuarter_stone.glb" id="34_axxwv"]
-[ext_resource type="PackedScene" uid="uid://bb7mpifb8nyel" path="res://Models/World/cliff_blockSlopeHalfWalls_rock.glb" id="35_m6oue"]
-[ext_resource type="PackedScene" uid="uid://chxs788mb31k3" path="res://Models/World/cliff_blockSlopeHalfWalls_stone.glb" id="36_b11g6"]
-[ext_resource type="PackedScene" uid="uid://dommebyr6ta0o" path="res://Models/World/cliff_blockSlopeWalls_rock.glb" id="37_4nsgo"]
-[ext_resource type="PackedScene" uid="uid://pt88n1ya807q" path="res://Models/World/cliff_blockSlopeWalls_stone.glb" id="38_f3cv8"]
-[ext_resource type="PackedScene" uid="uid://d4l1ewkqphk05" path="res://Models/World/cliff_blockSlope_rock.glb" id="39_2c841"]
-[ext_resource type="PackedScene" uid="uid://ya6v3wo2j7vw" path="res://Models/World/cliff_blockSlope_stone.glb" id="40_yce3w"]
-[ext_resource type="PackedScene" uid="uid://ch6ecawu6moxr" path="res://Models/World/cliff_block_rock.glb" id="41_xhvfb"]
-[ext_resource type="PackedScene" uid="uid://qa2bgej5yvhj" path="res://Models/World/cliff_block_stone.glb" id="42_1omp0"]
-[ext_resource type="PackedScene" uid="uid://5roolh4upe8q" path="res://Models/World/cliff_cave_rock.glb" id="43_kr65r"]
-[ext_resource type="PackedScene" uid="uid://kajqofhia6sw" path="res://Models/World/cliff_cave_stone.glb" id="44_uatrr"]
-[ext_resource type="PackedScene" uid="uid://cx3dbg1rbh3b5" path="res://Models/World/cliff_cornerInnerLarge_rock.glb" id="45_tq8si"]
-[ext_resource type="PackedScene" uid="uid://du7rm81gr1jy" path="res://Models/World/cliff_cornerInnerLarge_stone.glb" id="46_dn11k"]
-[ext_resource type="PackedScene" uid="uid://d2d8s6wrsahir" path="res://Models/World/cliff_cornerInnerTop_rock.glb" id="47_ydyos"]
-[ext_resource type="PackedScene" uid="uid://bqdap7xpt8n6t" path="res://Models/World/cliff_cornerInnerTop_stone.glb" id="48_dba47"]
-[ext_resource type="PackedScene" uid="uid://cup5hdxb3bowr" path="res://Models/World/cliff_cornerInner_rock.glb" id="49_w1qq1"]
-[ext_resource type="PackedScene" uid="uid://cwdtwt0t37q1v" path="res://Models/World/cliff_cornerInner_stone.glb" id="50_iplow"]
-[ext_resource type="PackedScene" uid="uid://hbf0te4l66sr" path="res://Models/World/cliff_cornerLarge_rock.glb" id="51_7m3fv"]
-[ext_resource type="PackedScene" uid="uid://bnfl735qswotd" path="res://Models/World/cliff_cornerLarge_stone.glb" id="52_ryovu"]
-[ext_resource type="PackedScene" uid="uid://d026nkcotlndq" path="res://Models/World/cliff_cornerTop_rock.glb" id="53_3s5yi"]
-[ext_resource type="PackedScene" uid="uid://c7wsbo5x5een1" path="res://Models/World/cliff_cornerTop_stone.glb" id="54_7pfpt"]
-[ext_resource type="PackedScene" uid="uid://ci8xwvhj3hb71" path="res://Models/World/cliff_corner_rock.glb" id="55_ka55e"]
-[ext_resource type="PackedScene" uid="uid://byvcg77bjlai2" path="res://Models/World/cliff_corner_stone.glb" id="56_d6ow4"]
-[ext_resource type="PackedScene" uid="uid://fpt4ng3knd30" path="res://Models/World/cliff_diagonal_rock.glb" id="57_8xygi"]
-[ext_resource type="PackedScene" uid="uid://bpseeiutgkemg" path="res://Models/World/cliff_diagonal_stone.glb" id="58_s6y7d"]
-[ext_resource type="PackedScene" uid="uid://bkhdo7m6mhs80" path="res://Models/World/cliff_halfCornerInner_rock.glb" id="59_pydak"]
-[ext_resource type="PackedScene" uid="uid://r36a8uw8o3me" path="res://Models/World/cliff_halfCornerInner_stone.glb" id="60_sjlcj"]
-[ext_resource type="PackedScene" uid="uid://do8ngftkbyykm" path="res://Models/World/cliff_halfCorner_rock.glb" id="61_6ypeb"]
-[ext_resource type="PackedScene" uid="uid://0t612y0m36o8" path="res://Models/World/cliff_halfCorner_stone.glb" id="62_17c4h"]
-[ext_resource type="PackedScene" uid="uid://c6wn10nrne2mc" path="res://Models/World/cliff_half_rock.glb" id="63_y0pgv"]
-[ext_resource type="PackedScene" uid="uid://ct6mumqq8jed6" path="res://Models/World/cliff_half_stone.glb" id="64_4muio"]
-[ext_resource type="PackedScene" uid="uid://bex7y6tymn17k" path="res://Models/World/cliff_large_rock.glb" id="65_1t64k"]
-[ext_resource type="PackedScene" uid="uid://dgg64gkybt7yy" path="res://Models/World/cliff_large_stone.glb" id="66_5q2u3"]
-[ext_resource type="PackedScene" uid="uid://c34bij67gjrme" path="res://Models/World/cliff_rock.glb" id="67_qqs4w"]
-[ext_resource type="PackedScene" uid="uid://cr3g3w3nbv0wf" path="res://Models/World/cliff_stepsCornerInner_rock.glb" id="68_odruo"]
-[ext_resource type="PackedScene" uid="uid://bwrg1cltchyuf" path="res://Models/World/cliff_stepsCornerInner_stone.glb" id="69_jte2n"]
-[ext_resource type="PackedScene" uid="uid://de4pcxl0agmco" path="res://Models/World/cliff_stepsCorner_rock.glb" id="70_gna1x"]
-[ext_resource type="PackedScene" uid="uid://ddcj7mp87jras" path="res://Models/World/cliff_stepsCorner_stone.glb" id="71_imyry"]
-[ext_resource type="PackedScene" uid="uid://3whdmqih1ij5" path="res://Models/World/cliff_steps_rock.glb" id="72_f1n6y"]
-[ext_resource type="PackedScene" uid="uid://dg05tm34n7uu4" path="res://Models/World/cliff_steps_stone.glb" id="73_7ja3s"]
-[ext_resource type="PackedScene" uid="uid://djps4xlaloy6l" path="res://Models/World/cliff_stone.glb" id="74_cw8sn"]
-[ext_resource type="PackedScene" uid="uid://jjo4tnhyamuj" path="res://Models/World/cliff_topDiagonal_rock.glb" id="75_ydpgk"]
-[ext_resource type="PackedScene" uid="uid://emphemuhh1us" path="res://Models/World/cliff_topDiagonal_stone.glb" id="76_wqqul"]
-[ext_resource type="PackedScene" uid="uid://bs3ecbjr2sqme" path="res://Models/World/cliff_top_rock.glb" id="77_coynq"]
-[ext_resource type="PackedScene" uid="uid://cucfx1iw8puaw" path="res://Models/World/cliff_top_stone.glb" id="78_38yea"]
-[ext_resource type="PackedScene" uid="uid://daqx1pfd75tft" path="res://Models/World/cliff_waterfallTop_rock.glb" id="79_pg8ow"]
-[ext_resource type="PackedScene" uid="uid://63effv55m0ka" path="res://Models/World/cliff_waterfallTop_stone.glb" id="80_62u0h"]
-[ext_resource type="PackedScene" uid="uid://de52wlb7rxnfa" path="res://Models/World/cliff_waterfall_rock.glb" id="81_l6ibt"]
-[ext_resource type="PackedScene" uid="uid://dyhwrem5danbq" path="res://Models/World/cliff_waterfall_stone.glb" id="82_tg1oc"]
-[ext_resource type="PackedScene" uid="uid://bjwlut0rrnlr7" path="res://Models/World/crops_bambooStageA.glb" id="83_2e3sa"]
-[ext_resource type="PackedScene" uid="uid://bxiox8mgf2bm7" path="res://Models/World/crops_bambooStageB.glb" id="84_ubpmk"]
-[ext_resource type="PackedScene" uid="uid://d03dve6cs6lmg" path="res://Models/World/crops_cornStageA.glb" id="85_1macq"]
-[ext_resource type="PackedScene" uid="uid://dcu85wxy15wdg" path="res://Models/World/crops_cornStageB.glb" id="86_bpjlm"]
-[ext_resource type="PackedScene" uid="uid://x7vieankru8i" path="res://Models/World/crops_cornStageC.glb" id="87_1y1kn"]
-[ext_resource type="PackedScene" uid="uid://bpwbnr7n4flqn" path="res://Models/World/crops_cornStageD.glb" id="88_l66kh"]
-[ext_resource type="PackedScene" uid="uid://oyy5hlcaq4sq" path="res://Models/World/crops_dirtDoubleRow.glb" id="89_m1mh1"]
-[ext_resource type="PackedScene" uid="uid://1wty52icixvt" path="res://Models/World/crops_dirtDoubleRowCorner.glb" id="90_t52lg"]
-[ext_resource type="PackedScene" uid="uid://7pv1exgf7ee6" path="res://Models/World/crops_dirtDoubleRowEnd.glb" id="91_ik38y"]
-[ext_resource type="PackedScene" uid="uid://bte2n881h7rdf" path="res://Models/World/crops_dirtRow.glb" id="92_turab"]
-[ext_resource type="PackedScene" uid="uid://csivv0h727a3y" path="res://Models/World/crops_dirtRowCorner.glb" id="93_qyj2c"]
-[ext_resource type="PackedScene" uid="uid://bqqjh0dh0j3j6" path="res://Models/World/crops_dirtRowEnd.glb" id="94_y5b5a"]
-[ext_resource type="PackedScene" uid="uid://cb4fhca2wtiel" path="res://Models/World/crops_dirtSingle.glb" id="95_r3rlg"]
-[ext_resource type="PackedScene" uid="uid://dacvnrqdi2qxl" path="res://Models/World/crops_leafsStageA.glb" id="96_54soy"]
-[ext_resource type="PackedScene" uid="uid://drpmkfevrvimw" path="res://Models/World/crops_leafsStageB.glb" id="97_hgr48"]
-[ext_resource type="PackedScene" uid="uid://dseywubmt3w87" path="res://Models/World/crops_wheatStageA.glb" id="98_absos"]
-[ext_resource type="PackedScene" uid="uid://bgexe4ivsqu8l" path="res://Models/World/crops_wheatStageB.glb" id="99_8pe7u"]
-[ext_resource type="PackedScene" uid="uid://cpx4g8ipnpylk" path="res://Models/World/crop_carrot.glb" id="100_3t4b0"]
-[ext_resource type="PackedScene" uid="uid://f3c0kx8qp8u5" path="res://Models/World/crop_melon.glb" id="101_3issx"]
-[ext_resource type="PackedScene" uid="uid://571plt0xhcny" path="res://Models/World/crop_pumpkin.glb" id="102_oe4ax"]
-[ext_resource type="PackedScene" uid="uid://chg2aaq76b51s" path="res://Models/World/crop_turnip.glb" id="103_stfw1"]
-[ext_resource type="PackedScene" uid="uid://csnplof3psl8l" path="res://Models/World/fence_bend.glb" id="104_doyyy"]
-[ext_resource type="PackedScene" uid="uid://q0d1kija5hcl" path="res://Models/World/fence_bendCenter.glb" id="105_5cyid"]
-[ext_resource type="PackedScene" uid="uid://5pd5p43yiv7s" path="res://Models/World/fence_corner.glb" id="106_54jew"]
-[ext_resource type="PackedScene" uid="uid://dg0f4lsyyehpb" path="res://Models/World/fence_gate.glb" id="107_lm3j7"]
-[ext_resource type="PackedScene" uid="uid://bsx1nomeej2mi" path="res://Models/World/fence_planks.glb" id="108_38vam"]
-[ext_resource type="PackedScene" uid="uid://5b6rvg2wtkif" path="res://Models/World/fence_planksDouble.glb" id="109_oy1jq"]
-[ext_resource type="PackedScene" uid="uid://0ktcep4fkdvc" path="res://Models/World/fence_simple.glb" id="110_w2r0v"]
-[ext_resource type="PackedScene" uid="uid://cy6pk8604im3v" path="res://Models/World/fence_simpleCenter.glb" id="111_7fwg0"]
-[ext_resource type="PackedScene" uid="uid://bh1hcyreg324b" path="res://Models/World/fence_simpleDiagonal.glb" id="112_1j3o5"]
-[ext_resource type="PackedScene" uid="uid://bwqk77kmgeufh" path="res://Models/World/fence_simpleDiagonalCenter.glb" id="113_y3vjt"]
-[ext_resource type="PackedScene" uid="uid://cy20k5aoddw33" path="res://Models/World/fence_simpleHigh.glb" id="114_i6sbd"]
-[ext_resource type="PackedScene" uid="uid://b6sgspphaqqmr" path="res://Models/World/fence_simpleLow.glb" id="115_7o4oh"]
-[ext_resource type="PackedScene" uid="uid://pmhonbcxu5ip" path="res://Models/World/flower_purpleA.glb" id="116_vmfio"]
-[ext_resource type="PackedScene" uid="uid://2xe7lemg0pdl" path="res://Models/World/flower_purpleB.glb" id="117_wt383"]
-[ext_resource type="PackedScene" uid="uid://mdm4iwogflii" path="res://Models/World/flower_purpleC.glb" id="118_ors2q"]
-[ext_resource type="PackedScene" uid="uid://c77nhtmkkno28" path="res://Models/World/flower_redA.glb" id="119_icxss"]
-[ext_resource type="PackedScene" uid="uid://o47c4reywus3" path="res://Models/World/flower_redB.glb" id="120_3mt4y"]
-[ext_resource type="PackedScene" uid="uid://cjoxm2wcihn04" path="res://Models/World/flower_redC.glb" id="121_ctjsx"]
-[ext_resource type="PackedScene" uid="uid://b4yxrv4ei1qsc" path="res://Models/World/flower_yellowA.glb" id="122_0ilb0"]
-[ext_resource type="PackedScene" uid="uid://b6300mu18113j" path="res://Models/World/flower_yellowB.glb" id="123_y078j"]
-[ext_resource type="PackedScene" uid="uid://dh35kq8j1obfo" path="res://Models/World/flower_yellowC.glb" id="124_eu8il"]
-[ext_resource type="PackedScene" uid="uid://cs530gk1xlxur" path="res://Models/World/grass.glb" id="125_e60ak"]
-[ext_resource type="PackedScene" uid="uid://cinbgt3ftxw3j" path="res://Models/World/grass_large.glb" id="126_2unxv"]
-[ext_resource type="PackedScene" uid="uid://c5tgkji1uquc0" path="res://Models/World/grass_leafs.glb" id="127_jik6p"]
-[ext_resource type="PackedScene" uid="uid://cef5gm7bw40pe" path="res://Models/World/grass_leafsLarge.glb" id="128_sgm1x"]
-[ext_resource type="PackedScene" uid="uid://bu375yjpa7c11" path="res://Models/World/ground_grass.glb" id="129_ysfn5"]
-[ext_resource type="PackedScene" uid="uid://bmc30jcnxvw2v" path="res://Models/World/ground_pathBend.glb" id="130_10i8x"]
-[ext_resource type="PackedScene" uid="uid://ciyaps500vqhe" path="res://Models/World/ground_pathBendBank.glb" id="131_43p36"]
-[ext_resource type="PackedScene" uid="uid://c53771de0xnxa" path="res://Models/World/ground_pathCorner.glb" id="132_vhxtl"]
-[ext_resource type="PackedScene" uid="uid://tkshjvr6lgpk" path="res://Models/World/ground_pathCornerSmall.glb" id="133_kwu53"]
-[ext_resource type="PackedScene" uid="uid://deikhdvchkk8v" path="res://Models/World/ground_pathCross.glb" id="134_7y2wa"]
-[ext_resource type="PackedScene" uid="uid://brhtfyrmkq02t" path="res://Models/World/ground_pathEnd.glb" id="135_h2rcp"]
-[ext_resource type="PackedScene" uid="uid://c5sd5g13d8el5" path="res://Models/World/ground_pathEndClosed.glb" id="136_iachx"]
-[ext_resource type="PackedScene" uid="uid://4mn5g2hptnd7" path="res://Models/World/ground_pathOpen.glb" id="137_r5tvp"]
-[ext_resource type="PackedScene" uid="uid://dpws052d4ccop" path="res://Models/World/ground_pathRocks.glb" id="138_0quk4"]
-[ext_resource type="PackedScene" uid="uid://boj1ygu77a08v" path="res://Models/World/ground_pathSide.glb" id="139_i5wxq"]
-[ext_resource type="PackedScene" uid="uid://coyl76er3yla1" path="res://Models/World/ground_pathSideOpen.glb" id="140_thdf2"]
-[ext_resource type="PackedScene" uid="uid://dle64sk8x0ya" path="res://Models/World/ground_pathSplit.glb" id="141_gdtes"]
-[ext_resource type="PackedScene" uid="uid://did5a2f5sokru" path="res://Models/World/ground_pathStraight.glb" id="142_d2evr"]
-[ext_resource type="PackedScene" uid="uid://es5kutcrbkc6" path="res://Models/World/ground_pathTile.glb" id="143_l5il1"]
-[ext_resource type="PackedScene" uid="uid://dhs7krbp2itgd" path="res://Models/World/ground_riverBend.glb" id="144_p7giy"]
-[ext_resource type="PackedScene" uid="uid://y0yn0xadkow7" path="res://Models/World/ground_riverBendBank.glb" id="145_d4mel"]
-[ext_resource type="PackedScene" uid="uid://ctuvofpq2oig3" path="res://Models/World/ground_riverCorner.glb" id="146_bhsnm"]
-[ext_resource type="PackedScene" uid="uid://1u48u0ljiuhh" path="res://Models/World/ground_riverCornerSmall.glb" id="147_doebw"]
-[ext_resource type="PackedScene" uid="uid://co4gx0gm66ta7" path="res://Models/World/ground_riverCross.glb" id="148_dk8c2"]
-[ext_resource type="PackedScene" uid="uid://55kim1w50tmf" path="res://Models/World/ground_riverEnd.glb" id="149_wvxaf"]
-[ext_resource type="PackedScene" uid="uid://cd2xo4j4magb2" path="res://Models/World/ground_riverEndClosed.glb" id="150_q5dhd"]
-[ext_resource type="PackedScene" uid="uid://ixefikt8c8wa" path="res://Models/World/ground_riverOpen.glb" id="151_aaqdl"]
-[ext_resource type="PackedScene" uid="uid://ca0kc14vab8hw" path="res://Models/World/ground_riverRocks.glb" id="152_3us07"]
-[ext_resource type="PackedScene" uid="uid://bndsn5eppnc2o" path="res://Models/World/ground_riverSide.glb" id="153_f3r0r"]
-[ext_resource type="PackedScene" uid="uid://dmse4w4jvscv6" path="res://Models/World/ground_riverSideOpen.glb" id="154_52jpo"]
-[ext_resource type="PackedScene" uid="uid://crc0s2s602ehu" path="res://Models/World/ground_riverSplit.glb" id="155_1q4h7"]
-[ext_resource type="PackedScene" uid="uid://tsr5g3prnpda" path="res://Models/World/ground_riverStraight.glb" id="156_f50gv"]
-[ext_resource type="PackedScene" uid="uid://6q5eldxuvhkb" path="res://Models/World/ground_riverTile.glb" id="157_s6gog"]
-[ext_resource type="PackedScene" uid="uid://b5fv8nh1qwsdi" path="res://Models/World/hanging_moss.glb" id="158_w8gae"]
-[ext_resource type="PackedScene" uid="uid://b44pmxpthsep2" path="res://Models/World/lily_large.glb" id="159_a3jqd"]
-[ext_resource type="PackedScene" uid="uid://dn2usyym6ohuv" path="res://Models/World/lily_small.glb" id="160_l1lcb"]
-[ext_resource type="PackedScene" uid="uid://daajuwrfo064n" path="res://Models/World/log.glb" id="161_4sfhq"]
-[ext_resource type="PackedScene" uid="uid://docsh0gev1efl" path="res://Models/World/log_large.glb" id="162_60l33"]
-[ext_resource type="PackedScene" uid="uid://0f1e2s85r26y" path="res://Models/World/log_stack.glb" id="163_a3pxd"]
-[ext_resource type="PackedScene" uid="uid://c8wwqj5gusqx4" path="res://Models/World/log_stackLarge.glb" id="164_wmmx7"]
-[ext_resource type="PackedScene" uid="uid://bw4w25brdreh5" path="res://Models/World/mushroom_red.glb" id="165_u8740"]
-[ext_resource type="PackedScene" uid="uid://d0uobkpjxkora" path="res://Models/World/mushroom_redGroup.glb" id="166_thmhf"]
-[ext_resource type="PackedScene" uid="uid://d3qxsh2xd6rog" path="res://Models/World/mushroom_redTall.glb" id="167_d1xx8"]
-[ext_resource type="PackedScene" uid="uid://bupsdy55q4o3y" path="res://Models/World/mushroom_tan.glb" id="168_epbkj"]
-[ext_resource type="PackedScene" uid="uid://b3pnoh4ouxclm" path="res://Models/World/mushroom_tanGroup.glb" id="169_n8fx7"]
-[ext_resource type="PackedScene" uid="uid://gy7geew3twyo" path="res://Models/World/mushroom_tanTall.glb" id="170_7i1ot"]
-[ext_resource type="PackedScene" uid="uid://cwbo1sjaw0y5p" path="res://Models/World/path_stone.glb" id="171_wg8gj"]
-[ext_resource type="PackedScene" uid="uid://bffglenbdkg70" path="res://Models/World/path_stoneCircle.glb" id="172_kh5ve"]
-[ext_resource type="PackedScene" uid="uid://bxlc3smupef57" path="res://Models/World/path_stoneCorner.glb" id="173_q2ai5"]
-[ext_resource type="PackedScene" uid="uid://o411kxex8noh" path="res://Models/World/path_stoneEnd.glb" id="174_mph5v"]
-[ext_resource type="PackedScene" uid="uid://gfdi487d6so7" path="res://Models/World/path_wood.glb" id="175_h7m1b"]
-[ext_resource type="PackedScene" uid="uid://bxgnluvf8t7jm" path="res://Models/World/path_woodCorner.glb" id="176_cknqp"]
-[ext_resource type="PackedScene" uid="uid://o1ynwsbgokco" path="res://Models/World/path_woodEnd.glb" id="177_mqfe8"]
-[ext_resource type="PackedScene" uid="uid://dlufh5y0xebcf" path="res://Models/World/plant_bush.glb" id="178_gy187"]
-[ext_resource type="PackedScene" uid="uid://cj883ib2hb1w5" path="res://Models/World/plant_bushDetailed.glb" id="179_4g7qt"]
-[ext_resource type="PackedScene" uid="uid://cicub38nlkar1" path="res://Models/World/plant_bushLarge.glb" id="180_y5bs3"]
-[ext_resource type="PackedScene" uid="uid://c5j5bey8mpogy" path="res://Models/World/plant_bushLargeTriangle.glb" id="181_jx5pt"]
-[ext_resource type="PackedScene" uid="uid://15of7cotbvgj" path="res://Models/World/plant_bushSmall.glb" id="182_coehw"]
-[ext_resource type="PackedScene" uid="uid://edplg1nrrkl0" path="res://Models/World/plant_bushTriangle.glb" id="183_5wgq7"]
-[ext_resource type="PackedScene" uid="uid://ds1q1g37t7rf" path="res://Models/World/plant_flatShort.glb" id="184_0uiry"]
-[ext_resource type="PackedScene" uid="uid://mvx52dq1ahpm" path="res://Models/World/plant_flatTall.glb" id="185_7h2or"]
-[ext_resource type="PackedScene" uid="uid://c3e5mejox45dk" path="res://Models/World/platform_beach.glb" id="186_l3eod"]
-[ext_resource type="PackedScene" uid="uid://pu1lkftdwc65" path="res://Models/World/platform_grass.glb" id="187_dds0s"]
-[ext_resource type="PackedScene" uid="uid://c4sxsrd3fj3td" path="res://Models/World/platform_stone.glb" id="188_7y2jd"]
-[ext_resource type="PackedScene" uid="uid://cbkfbcr2rrxog" path="res://Models/World/pot_large.glb" id="189_il4om"]
-[ext_resource type="PackedScene" uid="uid://bik33rfqofk55" path="res://Models/World/pot_small.glb" id="190_uc27y"]
-[ext_resource type="PackedScene" uid="uid://d08wmw5v8a8v1" path="res://Models/World/rock_largeA.glb" id="191_mcwiq"]
-[ext_resource type="PackedScene" uid="uid://de41b3504h3lk" path="res://Models/World/rock_largeB.glb" id="192_kcd27"]
-[ext_resource type="PackedScene" uid="uid://b2jjvln248i2n" path="res://Models/World/rock_largeC.glb" id="193_ernmh"]
-[ext_resource type="PackedScene" uid="uid://cpim85nivqnep" path="res://Models/World/rock_largeD.glb" id="194_jcihr"]
-[ext_resource type="PackedScene" uid="uid://bg85rwu5smweq" path="res://Models/World/rock_largeE.glb" id="195_tojtb"]
-[ext_resource type="PackedScene" uid="uid://44fxu0t7agyj" path="res://Models/World/rock_largeF.glb" id="196_n4pwh"]
-[ext_resource type="PackedScene" uid="uid://dmdb3jhl88kv" path="res://Models/World/rock_smallA.glb" id="197_himqo"]
-[ext_resource type="PackedScene" uid="uid://cv6wx2k73vceb" path="res://Models/World/rock_smallB.glb" id="198_pu5su"]
-[ext_resource type="PackedScene" uid="uid://do8l7t11p1mo1" path="res://Models/World/rock_smallC.glb" id="199_7kiol"]
-[ext_resource type="PackedScene" uid="uid://6bluy4rlopba" path="res://Models/World/rock_smallD.glb" id="200_b80hj"]
-[ext_resource type="PackedScene" uid="uid://f4o6xf86846b" path="res://Models/World/rock_smallE.glb" id="201_wigj1"]
-[ext_resource type="PackedScene" uid="uid://cnbxxli1ekjpv" path="res://Models/World/rock_smallF.glb" id="202_oelxv"]
-[ext_resource type="PackedScene" uid="uid://drh1vnx3b7pqs" path="res://Models/World/rock_smallFlatA.glb" id="203_k2jyd"]
-[ext_resource type="PackedScene" uid="uid://du2ax7h73x85l" path="res://Models/World/rock_smallFlatB.glb" id="204_o0y4j"]
-[ext_resource type="PackedScene" uid="uid://bs5u254uw83ou" path="res://Models/World/rock_smallFlatC.glb" id="205_bn17p"]
-[ext_resource type="PackedScene" uid="uid://bdqg08shsy223" path="res://Models/World/rock_smallG.glb" id="206_2t2r4"]
-[ext_resource type="PackedScene" uid="uid://ckb2gjjv545b3" path="res://Models/World/rock_smallH.glb" id="207_63tlc"]
-[ext_resource type="PackedScene" uid="uid://cjmmu0xcvm604" path="res://Models/World/rock_smallI.glb" id="208_p3wvb"]
-[ext_resource type="PackedScene" uid="uid://dxy6u5v34vxdb" path="res://Models/World/rock_smallTopA.glb" id="209_q8o1r"]
-[ext_resource type="PackedScene" uid="uid://8qqrrp7ygvh0" path="res://Models/World/rock_smallTopB.glb" id="210_veu8o"]
-[ext_resource type="PackedScene" uid="uid://bv2pj0l57virq" path="res://Models/World/rock_tallA.glb" id="211_si5wj"]
-[ext_resource type="PackedScene" uid="uid://d0dj073toyiw2" path="res://Models/World/rock_tallB.glb" id="212_ynt1s"]
-[ext_resource type="PackedScene" uid="uid://rthy568pay3m" path="res://Models/World/rock_tallC.glb" id="213_ibs2d"]
-[ext_resource type="PackedScene" uid="uid://ciwt67sm8hhgt" path="res://Models/World/rock_tallD.glb" id="214_tqc4n"]
-[ext_resource type="PackedScene" uid="uid://dwxoxnqqwnsxn" path="res://Models/World/rock_tallE.glb" id="215_pn4f5"]
-[ext_resource type="PackedScene" uid="uid://b2l6hdmggblbt" path="res://Models/World/rock_tallF.glb" id="216_3tfr7"]
-[ext_resource type="PackedScene" uid="uid://bfop3fl285u03" path="res://Models/World/rock_tallG.glb" id="217_1q0qb"]
-[ext_resource type="PackedScene" uid="uid://bdwe06dbx7163" path="res://Models/World/rock_tallH.glb" id="218_7qgxk"]
-[ext_resource type="PackedScene" uid="uid://dd8t0jwfnu4td" path="res://Models/World/rock_tallI.glb" id="219_n8dwo"]
-[ext_resource type="PackedScene" uid="uid://5qmnd81iun0y" path="res://Models/World/rock_tallJ.glb" id="220_l4uf5"]
-[ext_resource type="PackedScene" uid="uid://bjkajwm03mqt0" path="res://Models/World/sign.glb" id="221_2rscc"]
-[ext_resource type="PackedScene" uid="uid://c5a6woqun7er2" path="res://Models/World/statue_block.glb" id="222_o8v7i"]
-[ext_resource type="PackedScene" uid="uid://dpfy2uuvd5t1v" path="res://Models/World/statue_column.glb" id="223_c7oea"]
-[ext_resource type="PackedScene" uid="uid://yp0tijglphy3" path="res://Models/World/statue_columnDamaged.glb" id="224_afl43"]
-[ext_resource type="PackedScene" uid="uid://d05mr68hiu4so" path="res://Models/World/statue_head.glb" id="225_mimbb"]
-[ext_resource type="PackedScene" uid="uid://c0xon5u1t6qay" path="res://Models/World/statue_obelisk.glb" id="226_f2ek4"]
-[ext_resource type="PackedScene" uid="uid://c74rkh5lo7mya" path="res://Models/World/statue_ring.glb" id="227_f4kpf"]
-[ext_resource type="PackedScene" uid="uid://cm1y8q6tilqit" path="res://Models/World/stone_largeA.glb" id="228_2shhh"]
-[ext_resource type="PackedScene" uid="uid://bh6788kljfbry" path="res://Models/World/stone_largeB.glb" id="229_p54ys"]
-[ext_resource type="PackedScene" uid="uid://d3ej4od6uxaf0" path="res://Models/World/stone_largeC.glb" id="230_ck1tr"]
-[ext_resource type="PackedScene" uid="uid://ckglwp8gws4l6" path="res://Models/World/stone_largeD.glb" id="231_wcgb1"]
-[ext_resource type="PackedScene" uid="uid://5t5kgqh4tieq" path="res://Models/World/stone_largeE.glb" id="232_gsqdh"]
-[ext_resource type="PackedScene" uid="uid://cc6kcfqhysn6g" path="res://Models/World/stone_largeF.glb" id="233_yoh16"]
-[ext_resource type="PackedScene" uid="uid://bnbyyxksvxdga" path="res://Models/World/stone_smallA.glb" id="234_go6cy"]
-[ext_resource type="PackedScene" uid="uid://dm4l78ps0fdg" path="res://Models/World/stone_smallB.glb" id="235_7ptdy"]
-[ext_resource type="PackedScene" uid="uid://cqyk7nw557il6" path="res://Models/World/stone_smallC.glb" id="236_pymib"]
-[ext_resource type="PackedScene" uid="uid://ledd4lloy8v8" path="res://Models/World/stone_smallD.glb" id="237_ns2cw"]
-[ext_resource type="PackedScene" uid="uid://5ge8idi662q6" path="res://Models/World/stone_smallE.glb" id="238_h5ejd"]
-[ext_resource type="PackedScene" uid="uid://dluchkb6pvpl1" path="res://Models/World/stone_smallF.glb" id="239_4wh8v"]
-[ext_resource type="PackedScene" uid="uid://dd6eg1a31fc4y" path="res://Models/World/stone_smallFlatA.glb" id="240_sw71i"]
-[ext_resource type="PackedScene" uid="uid://degjghwu2b3m0" path="res://Models/World/stone_smallFlatB.glb" id="241_sqgeg"]
-[ext_resource type="PackedScene" uid="uid://cbwwidtvt613b" path="res://Models/World/stone_smallFlatC.glb" id="242_15top"]
-[ext_resource type="PackedScene" uid="uid://dhdbyqho1weet" path="res://Models/World/stone_smallG.glb" id="243_v1mpt"]
-[ext_resource type="PackedScene" uid="uid://bqbxsq0kphf66" path="res://Models/World/stone_smallH.glb" id="244_owkl7"]
-[ext_resource type="PackedScene" uid="uid://ca0iuc435e11a" path="res://Models/World/stone_smallI.glb" id="245_htyb2"]
-[ext_resource type="PackedScene" uid="uid://fd8fxjvmu74l" path="res://Models/World/stone_smallTopA.glb" id="246_o57jq"]
-[ext_resource type="PackedScene" uid="uid://c6jycua1nqsf2" path="res://Models/World/stone_smallTopB.glb" id="247_wo3w4"]
-[ext_resource type="PackedScene" uid="uid://dc78xxpdbo31e" path="res://Models/World/stone_tallA.glb" id="248_5dt31"]
-[ext_resource type="PackedScene" uid="uid://575d0w8hopda" path="res://Models/World/stone_tallB.glb" id="249_a5mtf"]
-[ext_resource type="PackedScene" uid="uid://d2484elimw3jc" path="res://Models/World/stone_tallC.glb" id="250_jnyjr"]
-[ext_resource type="PackedScene" uid="uid://lnl6pd8pav7x" path="res://Models/World/stone_tallD.glb" id="251_gkngy"]
-[ext_resource type="PackedScene" uid="uid://dqnojpt0wjwgb" path="res://Models/World/stone_tallE.glb" id="252_a0c8e"]
-[ext_resource type="PackedScene" uid="uid://d0b2g7xtran4e" path="res://Models/World/stone_tallF.glb" id="253_xqmb1"]
-[ext_resource type="PackedScene" uid="uid://ddt6wcu3sfbw5" path="res://Models/World/stone_tallG.glb" id="254_fqna8"]
-[ext_resource type="PackedScene" uid="uid://8jvlrd2c6s0g" path="res://Models/World/stone_tallH.glb" id="255_ixp6x"]
-[ext_resource type="PackedScene" uid="uid://ds6khlw6l7os2" path="res://Models/World/stone_tallI.glb" id="256_6vbp6"]
-[ext_resource type="PackedScene" uid="uid://oimrsnsymnhf" path="res://Models/World/stone_tallJ.glb" id="257_qx070"]
-[ext_resource type="PackedScene" uid="uid://00lje7gax5pn" path="res://Models/World/stump_old.glb" id="258_oe35n"]
-[ext_resource type="PackedScene" uid="uid://txgmdbdg8loq" path="res://Models/World/stump_oldTall.glb" id="259_mu8os"]
-[ext_resource type="PackedScene" uid="uid://2rfnkik7kg2c" path="res://Models/World/stump_round.glb" id="260_utfcj"]
-[ext_resource type="PackedScene" uid="uid://b2ccybv8acvpc" path="res://Models/World/stump_roundDetailed.glb" id="261_trtfa"]
-[ext_resource type="PackedScene" uid="uid://cp1mcvu73pijb" path="res://Models/World/stump_square.glb" id="262_wh4uj"]
-[ext_resource type="PackedScene" uid="uid://cp0k2bmu4373e" path="res://Models/World/stump_squareDetailed.glb" id="263_c0a7d"]
-[ext_resource type="PackedScene" uid="uid://bg5lpmupftfsh" path="res://Models/World/stump_squareDetailedWide.glb" id="264_fkw77"]
-[ext_resource type="PackedScene" uid="uid://cddrh0e31iw2m" path="res://Models/World/tent_detailedClosed.glb" id="265_86j26"]
-[ext_resource type="PackedScene" uid="uid://dp1uuy40u3q16" path="res://Models/World/tent_detailedOpen.glb" id="266_nyuxe"]
-[ext_resource type="PackedScene" uid="uid://bse8otbkhrte1" path="res://Models/World/tent_smallClosed.glb" id="267_mxanm"]
-[ext_resource type="PackedScene" uid="uid://dq3asrpyb47nc" path="res://Models/World/tent_smallOpen.glb" id="268_84tc4"]
-[ext_resource type="PackedScene" uid="uid://ckjloxsxpyrbm" path="res://Models/World/tree_blocks.glb" id="269_e3ww3"]
-[ext_resource type="PackedScene" uid="uid://cgyh8esc7q7eu" path="res://Models/World/tree_blocks_dark.glb" id="270_3wf6i"]
-[ext_resource type="PackedScene" uid="uid://diae2q5qyhctk" path="res://Models/World/tree_blocks_fall.glb" id="271_c85v4"]
-[ext_resource type="PackedScene" uid="uid://cmqgyl87loyas" path="res://Models/World/tree_cone.glb" id="272_ufvmn"]
-[ext_resource type="PackedScene" uid="uid://btg56n1nopkii" path="res://Models/World/tree_cone_dark.glb" id="273_383ic"]
-[ext_resource type="PackedScene" uid="uid://c7p1p8bpx8un4" path="res://Models/World/tree_cone_fall.glb" id="274_52abk"]
-[ext_resource type="PackedScene" uid="uid://dvhfl4my781xi" path="res://Models/World/tree_default.glb" id="275_2rw7v"]
-[ext_resource type="PackedScene" uid="uid://d3ihqetx0j86t" path="res://Models/World/tree_default_dark.glb" id="276_qscmv"]
-[ext_resource type="PackedScene" uid="uid://dpk2hrn4odakb" path="res://Models/World/tree_default_fall.glb" id="277_6vm8d"]
-[ext_resource type="PackedScene" uid="uid://cuktuj7nufm1v" path="res://Models/World/tree_detailed.glb" id="278_wmdyv"]
-[ext_resource type="PackedScene" uid="uid://b8bv8312g5bgw" path="res://Models/World/tree_detailed_dark.glb" id="279_s8qu3"]
-[ext_resource type="PackedScene" uid="uid://l46f6fubsrni" path="res://Models/World/tree_detailed_fall.glb" id="280_enhdm"]
-[ext_resource type="PackedScene" uid="uid://bd3kh3wadqfqs" path="res://Models/World/tree_fat.glb" id="281_yd5b2"]
-[ext_resource type="PackedScene" uid="uid://cp83fve5k7ar0" path="res://Models/World/tree_fat_darkh.glb" id="282_8080u"]
-[ext_resource type="PackedScene" uid="uid://deic8pwaeksu1" path="res://Models/World/tree_fat_fall.glb" id="283_65b6r"]
-[ext_resource type="PackedScene" uid="uid://cotgk27cmdx0t" path="res://Models/World/tree_oak.glb" id="284_8g3yp"]
-[ext_resource type="PackedScene" uid="uid://sxx28foexlmx" path="res://Models/World/tree_oak_dark.glb" id="285_jtavu"]
-[ext_resource type="PackedScene" uid="uid://ctqbkw3xf31br" path="res://Models/World/tree_oak_fall.glb" id="286_b0uua"]
-[ext_resource type="PackedScene" uid="uid://oqb34cjx0777" path="res://Models/World/tree_palm.glb" id="287_xeyqu"]
-[ext_resource type="PackedScene" uid="uid://dmetlvx180njj" path="res://Models/World/tree_palmBend.glb" id="288_7i60g"]
-[ext_resource type="PackedScene" uid="uid://csx82m5v5vbx0" path="res://Models/World/tree_palmDetailedShort.glb" id="289_w6jbu"]
-[ext_resource type="PackedScene" uid="uid://1p1vlcqn05lj" path="res://Models/World/tree_palmDetailedTall.glb" id="290_umimg"]
-[ext_resource type="PackedScene" uid="uid://o4t4w5ok8vgj" path="res://Models/World/tree_palmShort.glb" id="291_xtxqw"]
-[ext_resource type="PackedScene" uid="uid://cmn8k3eastucp" path="res://Models/World/tree_palmTall.glb" id="292_w588d"]
-[ext_resource type="PackedScene" uid="uid://cnau8jfkekpyv" path="res://Models/World/tree_pineDefaultA.glb" id="293_6pdgx"]
-[ext_resource type="PackedScene" uid="uid://d1ske8fwct0xb" path="res://Models/World/tree_pineDefaultB.glb" id="294_tij8b"]
-[ext_resource type="PackedScene" uid="uid://cxrfysffdaf2q" path="res://Models/World/tree_pineGroundA.glb" id="295_w1mi1"]
-[ext_resource type="PackedScene" uid="uid://c8gqces8navmi" path="res://Models/World/tree_pineGroundB.glb" id="296_nihg7"]
-[ext_resource type="PackedScene" uid="uid://do0hoqeadh1ay" path="res://Models/World/tree_pineRoundA.glb" id="297_m57wf"]
-[ext_resource type="PackedScene" uid="uid://dhs6i6gv1b2gg" path="res://Models/World/tree_pineRoundB.glb" id="298_6sf20"]
-[ext_resource type="PackedScene" uid="uid://b3vhpwimip4kv" path="res://Models/World/tree_pineRoundC.glb" id="299_sn710"]
-[ext_resource type="PackedScene" uid="uid://d35iooyaxketd" path="res://Models/World/tree_pineRoundD.glb" id="300_8blay"]
-[ext_resource type="PackedScene" uid="uid://dlkkm5dh7uice" path="res://Models/World/tree_pineRoundE.glb" id="301_dwtkg"]
-[ext_resource type="PackedScene" uid="uid://dvl7tvdamkqep" path="res://Models/World/tree_pineRoundF.glb" id="302_ctgil"]
-[ext_resource type="PackedScene" uid="uid://c1hoqgr5oltce" path="res://Models/World/tree_pineSmallA.glb" id="303_cc0o0"]
-[ext_resource type="PackedScene" uid="uid://pmdber4bwlgh" path="res://Models/World/tree_pineSmallB.glb" id="304_t24vc"]
-[ext_resource type="PackedScene" uid="uid://cqre5wvhflmlp" path="res://Models/World/tree_pineSmallC.glb" id="305_gwjc3"]
-[ext_resource type="PackedScene" uid="uid://dv7vgnuk4o8uw" path="res://Models/World/tree_pineSmallD.glb" id="306_rehyh"]
-[ext_resource type="PackedScene" uid="uid://bxlmsgku4jv2u" path="res://Models/World/tree_pineTallA.glb" id="307_5pcj1"]
-[ext_resource type="PackedScene" uid="uid://cthx665riwun" path="res://Models/World/tree_pineTallA_detailed.glb" id="308_4qxav"]
-[ext_resource type="PackedScene" uid="uid://cobtichmns5d5" path="res://Models/World/tree_pineTallB.glb" id="309_sruwr"]
-[ext_resource type="PackedScene" uid="uid://c8ie3ydbauhfe" path="res://Models/World/tree_pineTallB_detailed.glb" id="310_wgtyi"]
-[ext_resource type="PackedScene" uid="uid://cnesx3088so0" path="res://Models/World/tree_pineTallC.glb" id="311_37g8l"]
-[ext_resource type="PackedScene" uid="uid://bik0yvc71kgsa" path="res://Models/World/tree_pineTallC_detailed.glb" id="312_26f65"]
-[ext_resource type="PackedScene" uid="uid://bqxomiqtcq742" path="res://Models/World/tree_pineTallD.glb" id="313_b4da3"]
-[ext_resource type="PackedScene" uid="uid://bsxcupovtsehf" path="res://Models/World/tree_pineTallD_detailed.glb" id="314_tqqda"]
-[ext_resource type="PackedScene" uid="uid://dmt7y86e07cek" path="res://Models/World/tree_plateau.glb" id="315_h17xr"]
-[ext_resource type="PackedScene" uid="uid://bb8sa5u6wx8bx" path="res://Models/World/tree_plateau_dark.glb" id="316_v6dt0"]
-[ext_resource type="PackedScene" uid="uid://bynq6trcshmd7" path="res://Models/World/tree_plateau_fall.glb" id="317_32ncf"]
-[ext_resource type="PackedScene" uid="uid://dxe2l3340ox5k" path="res://Models/World/tree_simple.glb" id="318_jcns0"]
-[ext_resource type="PackedScene" uid="uid://bhovj6sfqah68" path="res://Models/World/tree_simple_dark.glb" id="319_376nf"]
-[ext_resource type="PackedScene" uid="uid://ccbb6jl48vo5n" path="res://Models/World/tree_simple_fall.glb" id="320_0py2t"]
-[ext_resource type="PackedScene" uid="uid://bgsh68tp5n8vb" path="res://Models/World/tree_small.glb" id="321_wksnb"]
-[ext_resource type="PackedScene" uid="uid://dnssmgsnsqbxd" path="res://Models/World/tree_small_dark.glb" id="322_qvrs7"]
-[ext_resource type="PackedScene" uid="uid://chlscnf6x3e4o" path="res://Models/World/tree_small_fall.glb" id="323_qbrks"]
-[ext_resource type="PackedScene" uid="uid://cv1gxl6bpvepu" path="res://Models/World/tree_tall.glb" id="324_lwwmm"]
-[ext_resource type="PackedScene" uid="uid://c0t5golmhj3t6" path="res://Models/World/tree_tall_dark.glb" id="325_jttt8"]
-[ext_resource type="PackedScene" uid="uid://cp6xcxle8doj0" path="res://Models/World/tree_tall_fall.glb" id="326_kqpt2"]
-[ext_resource type="PackedScene" uid="uid://cpttoicm0ebfe" path="res://Models/World/tree_thin.glb" id="327_1dgda"]
-[ext_resource type="PackedScene" uid="uid://bj2oavtvkkimf" path="res://Models/World/tree_thin_dark.glb" id="328_kg0t1"]
-[ext_resource type="PackedScene" uid="uid://xsowwa21ol3h" path="res://Models/World/tree_thin_fall.glb" id="329_y6e72"]
+[ext_resource type="PackedScene" uid="uid://dqsh5c2chxsvm" path="res://Resources/Models/Trains/railroad-corner-large-ramp.glb" id="1_j1mws"]
+[ext_resource type="PackedScene" uid="uid://bqcjgliq4w76h" path="res://Resources/Models/Trains/railroad-corner-large.glb" id="2_2r5d5"]
+[ext_resource type="PackedScene" uid="uid://clb1deu253tj6" path="res://Resources/Models/Trains/railroad-corner-small-ramp.glb" id="3_f3iog"]
+[ext_resource type="PackedScene" uid="uid://bqwvsqhybhy6l" path="res://Resources/Models/Trains/railroad-corner-small.glb" id="4_i2u23"]
+[ext_resource type="PackedScene" uid="uid://dpilqc7gv3le6" path="res://Resources/Models/Trains/railroad-curve.glb" id="5_olf72"]
+[ext_resource type="PackedScene" uid="uid://bad708vn4t278" path="res://Resources/Models/Trains/railroad-damaged-corner-large-ramp.glb" id="6_t6lql"]
+[ext_resource type="PackedScene" uid="uid://t41psa475s8u" path="res://Resources/Models/Trains/railroad-damaged-corner-large.glb" id="7_m5h4i"]
+[ext_resource type="PackedScene" uid="uid://b50g51dsv4myj" path="res://Resources/Models/Trains/railroad-damaged-corner-small-ramp.glb" id="8_elwfb"]
+[ext_resource type="PackedScene" uid="uid://lv8jqt2nn3qu" path="res://Resources/Models/Trains/railroad-damaged-corner-small.glb" id="9_pb0q0"]
+[ext_resource type="PackedScene" uid="uid://dao5jmbrrnt3j" path="res://Resources/Models/Trains/railroad-damaged-curve.glb" id="10_w4pj4"]
+[ext_resource type="PackedScene" uid="uid://dwaev12x6myps" path="res://Resources/Models/Trains/railroad-damaged-straight-bend-large.glb" id="11_r88x6"]
+[ext_resource type="PackedScene" uid="uid://c10v3p5651pmn" path="res://Resources/Models/Trains/railroad-damaged-straight-bend.glb" id="12_irkq7"]
+[ext_resource type="PackedScene" uid="uid://ber5eke4w8s6t" path="res://Resources/Models/Trains/railroad-damaged-straight-bump-down.glb" id="13_2g28h"]
+[ext_resource type="PackedScene" uid="uid://bam0ku6eftphs" path="res://Resources/Models/Trains/railroad-damaged-straight-bump-up.glb" id="14_68p57"]
+[ext_resource type="PackedScene" uid="uid://b6btcb1jldyqn" path="res://Resources/Models/Trains/railroad-damaged-straight-hill-beginning.glb" id="15_wqiq6"]
+[ext_resource type="PackedScene" uid="uid://dlvf32hjfea2p" path="res://Resources/Models/Trains/railroad-damaged-straight-hill-complete-half.glb" id="16_j4qog"]
+[ext_resource type="PackedScene" uid="uid://jngv767wjqjr" path="res://Resources/Models/Trains/railroad-damaged-straight-hill-complete.glb" id="17_v2q6n"]
+[ext_resource type="PackedScene" uid="uid://bwmyfikiiih3o" path="res://Resources/Models/Trains/railroad-damaged-straight-hill-end.glb" id="18_5bnyy"]
+[ext_resource type="PackedScene" uid="uid://kgwnduq2bo4k" path="res://Resources/Models/Trains/railroad-damaged-straight-skew-left-side.glb" id="19_oojqa"]
+[ext_resource type="PackedScene" uid="uid://cm4pidtq6hqab" path="res://Resources/Models/Trains/railroad-damaged-straight-skew-left.glb" id="20_x1x8e"]
+[ext_resource type="PackedScene" uid="uid://ckmoticoxipkc" path="res://Resources/Models/Trains/railroad-damaged-straight-skew-right-side.glb" id="21_563l4"]
+[ext_resource type="PackedScene" uid="uid://bcquq5pmg1w4r" path="res://Resources/Models/Trains/railroad-damaged-straight-skew-right.glb" id="22_fxcf7"]
+[ext_resource type="PackedScene" uid="uid://n3l6pm00xd3r" path="res://Resources/Models/Trains/railroad-damaged-straight.glb" id="23_stbfc"]
+[ext_resource type="PackedScene" uid="uid://c444p4g1aabpj" path="res://Resources/Models/Trains/railroad-rail-corner-large-ramp.glb" id="24_em35f"]
+[ext_resource type="PackedScene" uid="uid://c35q1tg6yjtyo" path="res://Resources/Models/Trains/railroad-rail-corner-large.glb" id="25_r5hpe"]
+[ext_resource type="PackedScene" uid="uid://bpgwaq76nem3a" path="res://Resources/Models/Trains/railroad-rail-corner-small-ramp.glb" id="26_1p2ar"]
+[ext_resource type="PackedScene" uid="uid://0wqljpoa00hs" path="res://Resources/Models/Trains/railroad-rail-corner-small.glb" id="27_qsq7n"]
+[ext_resource type="PackedScene" uid="uid://42r5utwwugsr" path="res://Resources/Models/Trains/railroad-rail-curve.glb" id="28_2uptj"]
+[ext_resource type="PackedScene" uid="uid://dr1wa2eepajs0" path="res://Resources/Models/Trains/railroad-rail-straight-bend-large.glb" id="29_npho8"]
+[ext_resource type="PackedScene" uid="uid://c3tdn2nhg7xlb" path="res://Resources/Models/Trains/railroad-rail-straight-bend.glb" id="30_dwaa5"]
+[ext_resource type="PackedScene" uid="uid://ckavsev5g0hli" path="res://Resources/Models/Trains/railroad-rail-straight-bump-down.glb" id="31_fqh8d"]
+[ext_resource type="PackedScene" uid="uid://5tx8vlcjv1i0" path="res://Resources/Models/Trains/railroad-rail-straight-bump-up.glb" id="32_c2hnp"]
+[ext_resource type="PackedScene" uid="uid://dn5mgheyyfn7d" path="res://Resources/Models/Trains/railroad-rail-straight-hill-beginning.glb" id="33_y8pvf"]
+[ext_resource type="PackedScene" uid="uid://4mdhfnew2cfp" path="res://Resources/Models/Trains/railroad-rail-straight-hill-complete-half.glb" id="34_iopw1"]
+[ext_resource type="PackedScene" uid="uid://dlexl7vhk18tn" path="res://Resources/Models/Trains/railroad-rail-straight-hill-complete.glb" id="35_fsxf5"]
+[ext_resource type="PackedScene" uid="uid://cts5kf74kxlq3" path="res://Resources/Models/Trains/railroad-rail-straight-hill-end.glb" id="36_218nw"]
+[ext_resource type="PackedScene" uid="uid://s7iax8w58tmu" path="res://Resources/Models/Trains/railroad-rail-straight-skew-left-side.glb" id="37_hqy1m"]
+[ext_resource type="PackedScene" uid="uid://d24n4jhcjstf5" path="res://Resources/Models/Trains/railroad-rail-straight-skew-left.glb" id="38_eyhp2"]
+[ext_resource type="PackedScene" uid="uid://djwm3orvvaql3" path="res://Resources/Models/Trains/railroad-rail-straight-skew-right-side.glb" id="39_yffmm"]
+[ext_resource type="PackedScene" uid="uid://din246q0sxdl8" path="res://Resources/Models/Trains/railroad-rail-straight-skew-right.glb" id="40_34v84"]
+[ext_resource type="PackedScene" uid="uid://bp0owabjogvbn" path="res://Resources/Models/Trains/railroad-rail-straight.glb" id="41_rqfh6"]
+[ext_resource type="PackedScene" uid="uid://c8shx4elruig2" path="res://Resources/Models/Trains/railroad-straight-bend-large.glb" id="42_pk1mk"]
+[ext_resource type="PackedScene" uid="uid://db54ccrs2p1pe" path="res://Resources/Models/Trains/railroad-straight-bend.glb" id="43_u2kux"]
+[ext_resource type="PackedScene" uid="uid://yx55i6xjrkpm" path="res://Resources/Models/Trains/railroad-straight-bump-down.glb" id="44_xguwt"]
+[ext_resource type="PackedScene" uid="uid://xg02tupr6fck" path="res://Resources/Models/Trains/railroad-straight-bump-up.glb" id="45_4kq2s"]
+[ext_resource type="PackedScene" uid="uid://dvlh56bia6mqk" path="res://Resources/Models/Trains/railroad-straight-hill-beginning.glb" id="46_f8igi"]
+[ext_resource type="PackedScene" uid="uid://b7h0k2rpu6dy8" path="res://Resources/Models/Trains/railroad-straight-hill-complete-half.glb" id="47_lwlsi"]
+[ext_resource type="PackedScene" uid="uid://ctoyaxne4rdne" path="res://Resources/Models/Trains/railroad-straight-hill-complete.glb" id="48_0c4bb"]
+[ext_resource type="PackedScene" uid="uid://34uswn0wfqwt" path="res://Resources/Models/Trains/railroad-straight-hill-end.glb" id="49_s8x5q"]
+[ext_resource type="PackedScene" uid="uid://kn4t2qyje03g" path="res://Resources/Models/Trains/railroad-straight-skew-left-side.glb" id="50_lirmi"]
+[ext_resource type="PackedScene" uid="uid://clocms4oteitp" path="res://Resources/Models/Trains/railroad-straight-skew-left.glb" id="51_5mhhb"]
+[ext_resource type="PackedScene" uid="uid://cq5dr3e5haijt" path="res://Resources/Models/Trains/railroad-straight-skew-right-side.glb" id="52_u54jl"]
+[ext_resource type="PackedScene" uid="uid://bv4jrlmneatpf" path="res://Resources/Models/Trains/railroad-straight-skew-right.glb" id="53_7fmg3"]
+[ext_resource type="PackedScene" uid="uid://b2v5qqxmsfdo1" path="res://Resources/Models/Trains/railroad-straight.glb" id="54_c2euu"]
+[ext_resource type="PackedScene" uid="uid://d1bwtud0bb8b2" path="res://Resources/Models/Trains/spline-segment.glb" id="55_x1ey3"]
+[ext_resource type="PackedScene" uid="uid://cta74kr4g53p7" path="res://Resources/Models/Trains/spline-track-damaged.glb" id="56_is05k"]
+[ext_resource type="PackedScene" uid="uid://dvpslbrvcesor" path="res://Resources/Models/Trains/spline-track.glb" id="57_7nvls"]
+[ext_resource type="PackedScene" uid="uid://cgxlelv165x4a" path="res://Resources/Models/Trains/track-detailed.glb" id="58_atl0b"]
+[ext_resource type="PackedScene" uid="uid://yqn7t6sb71wa" path="res://Resources/Models/Trains/track-single-detailed.glb" id="59_jv5b4"]
+[ext_resource type="PackedScene" uid="uid://bu2hv67td1y46" path="res://Resources/Models/Trains/track-single.glb" id="60_bnc2d"]
+[ext_resource type="PackedScene" uid="uid://bqcmvrwev8jwk" path="res://Resources/Models/Trains/track.glb" id="61_6v1r7"]
+[ext_resource type="PackedScene" uid="uid://dqiubju8kkqo3" path="res://Resources/Models/Trains/train-carriage-box.glb" id="62_xv5g3"]
+[ext_resource type="PackedScene" uid="uid://dqumeiy728wvs" path="res://Resources/Models/Trains/train-carriage-coal.glb" id="63_h04g1"]
+[ext_resource type="PackedScene" uid="uid://ddu4qhpt8xcwm" path="res://Resources/Models/Trains/train-carriage-container-blue.glb" id="64_7580w"]
+[ext_resource type="PackedScene" uid="uid://d1uwh2mb74hjo" path="res://Resources/Models/Trains/train-carriage-container-green.glb" id="65_ne68c"]
+[ext_resource type="PackedScene" uid="uid://b1v4ra6nkoyln" path="res://Resources/Models/Trains/train-carriage-container-red.glb" id="66_or46l"]
+[ext_resource type="PackedScene" uid="uid://7nekyldksbd2" path="res://Resources/Models/Trains/train-carriage-dirt.glb" id="67_6ijb4"]
+[ext_resource type="PackedScene" uid="uid://p1og7hjyt735" path="res://Resources/Models/Trains/train-carriage-flatbed-wood.glb" id="68_c1w4e"]
+[ext_resource type="PackedScene" uid="uid://vbjcjpp36pik" path="res://Resources/Models/Trains/train-carriage-flatbed.glb" id="69_plqge"]
+[ext_resource type="PackedScene" uid="uid://cxba1y135fpgw" path="res://Resources/Models/Trains/train-carriage-lumber.glb" id="70_17sgo"]
+[ext_resource type="PackedScene" uid="uid://bjaysip3lvpdj" path="res://Resources/Models/Trains/train-carriage-tank-large.glb" id="71_qakrr"]
+[ext_resource type="PackedScene" uid="uid://cqev2dgysbf18" path="res://Resources/Models/Trains/train-carriage-tank.glb" id="72_32tyk"]
+[ext_resource type="PackedScene" uid="uid://vgnu4s1i1ohf" path="res://Resources/Models/Trains/train-carriage-wood.glb" id="73_uo2wt"]
+[ext_resource type="PackedScene" uid="uid://b6e3oadr8hx56" path="res://Resources/Models/Trains/train-connector.glb" id="74_k43v2"]
+[ext_resource type="PackedScene" uid="uid://d3iox14cfxui8" path="res://Resources/Models/Trains/train-diesel-a.glb" id="75_cpyae"]
+[ext_resource type="PackedScene" uid="uid://dgk0vse6bgk8g" path="res://Resources/Models/Trains/train-diesel-b.glb" id="76_0i6na"]
+[ext_resource type="PackedScene" uid="uid://bo2gwot8lb526" path="res://Resources/Models/Trains/train-diesel-box-a.glb" id="77_rklvb"]
+[ext_resource type="PackedScene" uid="uid://h30bststn7we" path="res://Resources/Models/Trains/train-diesel-box-b.glb" id="78_1r70t"]
+[ext_resource type="PackedScene" uid="uid://bdvsivg2m0bbk" path="res://Resources/Models/Trains/train-diesel-box-c.glb" id="79_if32a"]
+[ext_resource type="PackedScene" uid="uid://bixqfh3s85qdq" path="res://Resources/Models/Trains/train-diesel-c.glb" id="80_63l56"]
+[ext_resource type="PackedScene" uid="uid://beleuul4snem" path="res://Resources/Models/Trains/train-electric-bullet-a.glb" id="81_gwf3o"]
+[ext_resource type="PackedScene" uid="uid://dst0nof43bnmq" path="res://Resources/Models/Trains/train-electric-bullet-b.glb" id="82_beyfn"]
+[ext_resource type="PackedScene" uid="uid://wlcxjgpfys60" path="res://Resources/Models/Trains/train-electric-bullet-c.glb" id="83_vblst"]
+[ext_resource type="PackedScene" uid="uid://8w1oqfh7q3kl" path="res://Resources/Models/Trains/train-electric-city-a.glb" id="84_1l7td"]
+[ext_resource type="PackedScene" uid="uid://ddwnfd7a1smlr" path="res://Resources/Models/Trains/train-electric-city-b.glb" id="85_4aicn"]
+[ext_resource type="PackedScene" uid="uid://vsjkv5ngfa70" path="res://Resources/Models/Trains/train-electric-city-c.glb" id="86_equ6e"]
+[ext_resource type="PackedScene" uid="uid://bs5foreb4ew57" path="res://Resources/Models/Trains/train-electric-double-a.glb" id="87_i7nfs"]
+[ext_resource type="PackedScene" uid="uid://dckvjrao4vi4j" path="res://Resources/Models/Trains/train-electric-double-b.glb" id="88_tnsgl"]
+[ext_resource type="PackedScene" uid="uid://cxf5h6ixwipp4" path="res://Resources/Models/Trains/train-electric-double-c.glb" id="89_qnmx4"]
+[ext_resource type="PackedScene" uid="uid://qatm3mx1vb47" path="res://Resources/Models/Trains/train-electric-square-a.glb" id="90_a7ixv"]
+[ext_resource type="PackedScene" uid="uid://drgatqit1err5" path="res://Resources/Models/Trains/train-electric-square-b.glb" id="91_j3b5a"]
+[ext_resource type="PackedScene" uid="uid://c3sakot7k3ubh" path="res://Resources/Models/Trains/train-electric-square-c.glb" id="92_ssyhl"]
+[ext_resource type="PackedScene" uid="uid://cx1wphaqasx06" path="res://Resources/Models/Trains/train-electric-subway-a.glb" id="93_hgu4u"]
+[ext_resource type="PackedScene" uid="uid://cbxyky65fa1wx" path="res://Resources/Models/Trains/train-electric-subway-b.glb" id="94_bvtra"]
+[ext_resource type="PackedScene" uid="uid://cxbck4iynnt3" path="res://Resources/Models/Trains/train-electric-subway-c.glb" id="95_saiu5"]
+[ext_resource type="PackedScene" uid="uid://5jp02cwgll5d" path="res://Resources/Models/Trains/train-locomotive-a.glb" id="96_mrhbg"]
+[ext_resource type="PackedScene" uid="uid://bws8b4dbw2s4p" path="res://Resources/Models/Trains/train-locomotive-b.glb" id="97_pvg22"]
+[ext_resource type="PackedScene" uid="uid://dx2utt08hkq2n" path="res://Resources/Models/Trains/train-locomotive-c.glb" id="98_bcbsq"]
+[ext_resource type="PackedScene" uid="uid://dqh2ggm5vq2o5" path="res://Resources/Models/Trains/train-locomotive-passenger-a.glb" id="99_wnjum"]
+[ext_resource type="PackedScene" uid="uid://brwlxri2hiy1k" path="res://Resources/Models/Trains/train-locomotive-passenger-b.glb" id="100_nby80"]
+[ext_resource type="PackedScene" uid="uid://u5ro1sirklu8" path="res://Resources/Models/Trains/train-tram-classic.glb" id="101_oci76"]
+[ext_resource type="PackedScene" uid="uid://dccsvphpsi3bp" path="res://Resources/Models/Trains/train-tram-modern.glb" id="102_k0b6c"]
+[ext_resource type="PackedScene" uid="uid://bbhdigcdr1t54" path="res://Resources/Models/Trains/train-tram-round.glb" id="103_s8f45"]
 
 [node name="LibrairyScene" type="Node3D"]
 
-[node name="bed2" parent="." instance=ExtResource("1_bfh8s")]
+[node name="railroad-corner-large-ramp2" parent="." instance=ExtResource("1_j1mws")]
 
-[node name="bed_floor2" parent="." instance=ExtResource("2_mycum")]
+[node name="railroad-corner-large2" parent="." instance=ExtResource("2_2r5d5")]
 
-[node name="bridge_center_stone2" parent="." instance=ExtResource("3_pptmn")]
+[node name="railroad-corner-small-ramp2" parent="." instance=ExtResource("3_f3iog")]
 
-[node name="bridge_center_stoneRound2" parent="." instance=ExtResource("4_fwwk1")]
+[node name="railroad-corner-small2" parent="." instance=ExtResource("4_i2u23")]
 
-[node name="bridge_center_wood2" parent="." instance=ExtResource("5_eqh0a")]
+[node name="railroad-curve2" parent="." instance=ExtResource("5_olf72")]
 
-[node name="bridge_center_woodRound2" parent="." instance=ExtResource("6_a63ha")]
+[node name="railroad-damaged-corner-large-ramp2" parent="." instance=ExtResource("6_t6lql")]
 
-[node name="bridge_side_stone2" parent="." instance=ExtResource("7_yorgy")]
+[node name="railroad-damaged-corner-large2" parent="." instance=ExtResource("7_m5h4i")]
 
-[node name="bridge_side_stoneRound2" parent="." instance=ExtResource("8_yu3c1")]
+[node name="railroad-damaged-corner-small-ramp2" parent="." instance=ExtResource("8_elwfb")]
 
-[node name="bridge_side_wood2" parent="." instance=ExtResource("9_8kcpy")]
+[node name="railroad-damaged-corner-small2" parent="." instance=ExtResource("9_pb0q0")]
 
-[node name="bridge_side_woodRound2" parent="." instance=ExtResource("10_rmvug")]
+[node name="railroad-damaged-curve2" parent="." instance=ExtResource("10_w4pj4")]
 
-[node name="bridge_stone2" parent="." instance=ExtResource("11_4kxs5")]
+[node name="railroad-damaged-straight-bend-large2" parent="." instance=ExtResource("11_r88x6")]
 
-[node name="bridge_stoneNarrow2" parent="." instance=ExtResource("12_spu8k")]
+[node name="railroad-damaged-straight-bend2" parent="." instance=ExtResource("12_irkq7")]
 
-[node name="bridge_stoneRound2" parent="." instance=ExtResource("13_qh468")]
+[node name="railroad-damaged-straight-bump-down2" parent="." instance=ExtResource("13_2g28h")]
 
-[node name="bridge_stoneRoundNarrow2" parent="." instance=ExtResource("14_bwdaa")]
+[node name="railroad-damaged-straight-bump-up2" parent="." instance=ExtResource("14_68p57")]
 
-[node name="bridge_wood2" parent="." instance=ExtResource("15_1rnvf")]
+[node name="railroad-damaged-straight-hill-beginning2" parent="." instance=ExtResource("15_wqiq6")]
 
-[node name="bridge_woodNarrow2" parent="." instance=ExtResource("16_pw5dg")]
+[node name="railroad-damaged-straight-hill-complete-half2" parent="." instance=ExtResource("16_j4qog")]
 
-[node name="bridge_woodRound2" parent="." instance=ExtResource("17_vbn3s")]
+[node name="railroad-damaged-straight-hill-complete2" parent="." instance=ExtResource("17_v2q6n")]
 
-[node name="bridge_woodRoundNarrow2" parent="." instance=ExtResource("18_u41qc")]
+[node name="railroad-damaged-straight-hill-end2" parent="." instance=ExtResource("18_5bnyy")]
 
-[node name="cactus_short2" parent="." instance=ExtResource("19_lx4tn")]
+[node name="railroad-damaged-straight-skew-left-side2" parent="." instance=ExtResource("19_oojqa")]
 
-[node name="cactus_tall2" parent="." instance=ExtResource("20_3og71")]
+[node name="railroad-damaged-straight-skew-left2" parent="." instance=ExtResource("20_x1x8e")]
 
-[node name="campfire_bricks2" parent="." instance=ExtResource("21_1bp5o")]
+[node name="railroad-damaged-straight-skew-right-side2" parent="." instance=ExtResource("21_563l4")]
 
-[node name="campfire_logs2" parent="." instance=ExtResource("22_obcn5")]
+[node name="railroad-damaged-straight-skew-right2" parent="." instance=ExtResource("22_fxcf7")]
 
-[node name="campfire_planks2" parent="." instance=ExtResource("23_iaq7j")]
+[node name="railroad-damaged-straight2" parent="." instance=ExtResource("23_stbfc")]
 
-[node name="campfire_stones2" parent="." instance=ExtResource("24_f21du")]
+[node name="railroad-rail-corner-large-ramp2" parent="." instance=ExtResource("24_em35f")]
 
-[node name="canoe2" parent="." instance=ExtResource("25_g2tfo")]
+[node name="railroad-rail-corner-large2" parent="." instance=ExtResource("25_r5hpe")]
 
-[node name="canoe_paddle2" parent="." instance=ExtResource("26_aatn4")]
+[node name="railroad-rail-corner-small-ramp2" parent="." instance=ExtResource("26_1p2ar")]
 
-[node name="cliff_blockCave_rock2" parent="." instance=ExtResource("27_xh3n5")]
+[node name="railroad-rail-corner-small2" parent="." instance=ExtResource("27_qsq7n")]
 
-[node name="cliff_blockCave_stone2" parent="." instance=ExtResource("28_ke7yk")]
+[node name="railroad-rail-curve2" parent="." instance=ExtResource("28_2uptj")]
 
-[node name="cliff_blockDiagonal_rock2" parent="." instance=ExtResource("29_60oqm")]
+[node name="railroad-rail-straight-bend-large2" parent="." instance=ExtResource("29_npho8")]
 
-[node name="cliff_blockDiagonal_stone2" parent="." instance=ExtResource("30_baw8x")]
+[node name="railroad-rail-straight-bend2" parent="." instance=ExtResource("30_dwaa5")]
 
-[node name="cliff_blockHalf_rock2" parent="." instance=ExtResource("31_r7qu1")]
+[node name="railroad-rail-straight-bump-down2" parent="." instance=ExtResource("31_fqh8d")]
 
-[node name="cliff_blockHalf_stone2" parent="." instance=ExtResource("32_w7xat")]
+[node name="railroad-rail-straight-bump-up2" parent="." instance=ExtResource("32_c2hnp")]
 
-[node name="cliff_blockQuarter_rock2" parent="." instance=ExtResource("33_qj6u4")]
+[node name="railroad-rail-straight-hill-beginning2" parent="." instance=ExtResource("33_y8pvf")]
 
-[node name="cliff_blockQuarter_stone2" parent="." instance=ExtResource("34_axxwv")]
+[node name="railroad-rail-straight-hill-complete-half2" parent="." instance=ExtResource("34_iopw1")]
 
-[node name="cliff_blockSlopeHalfWalls_rock2" parent="." instance=ExtResource("35_m6oue")]
+[node name="railroad-rail-straight-hill-complete2" parent="." instance=ExtResource("35_fsxf5")]
 
-[node name="cliff_blockSlopeHalfWalls_stone2" parent="." instance=ExtResource("36_b11g6")]
+[node name="railroad-rail-straight-hill-end2" parent="." instance=ExtResource("36_218nw")]
 
-[node name="cliff_blockSlopeWalls_rock2" parent="." instance=ExtResource("37_4nsgo")]
+[node name="railroad-rail-straight-skew-left-side2" parent="." instance=ExtResource("37_hqy1m")]
 
-[node name="cliff_blockSlopeWalls_stone2" parent="." instance=ExtResource("38_f3cv8")]
+[node name="railroad-rail-straight-skew-left2" parent="." instance=ExtResource("38_eyhp2")]
 
-[node name="cliff_blockSlope_rock2" parent="." instance=ExtResource("39_2c841")]
+[node name="railroad-rail-straight-skew-right-side2" parent="." instance=ExtResource("39_yffmm")]
 
-[node name="cliff_blockSlope_stone2" parent="." instance=ExtResource("40_yce3w")]
+[node name="railroad-rail-straight-skew-right2" parent="." instance=ExtResource("40_34v84")]
 
-[node name="cliff_block_rock2" parent="." instance=ExtResource("41_xhvfb")]
+[node name="railroad-rail-straight2" parent="." instance=ExtResource("41_rqfh6")]
 
-[node name="cliff_block_stone2" parent="." instance=ExtResource("42_1omp0")]
+[node name="railroad-straight-bend-large2" parent="." instance=ExtResource("42_pk1mk")]
 
-[node name="cliff_cave_rock2" parent="." instance=ExtResource("43_kr65r")]
+[node name="railroad-straight-bend2" parent="." instance=ExtResource("43_u2kux")]
 
-[node name="cliff_cave_stone2" parent="." instance=ExtResource("44_uatrr")]
+[node name="railroad-straight-bump-down2" parent="." instance=ExtResource("44_xguwt")]
 
-[node name="cliff_cornerInnerLarge_rock2" parent="." instance=ExtResource("45_tq8si")]
+[node name="railroad-straight-bump-up2" parent="." instance=ExtResource("45_4kq2s")]
 
-[node name="cliff_cornerInnerLarge_stone2" parent="." instance=ExtResource("46_dn11k")]
+[node name="railroad-straight-hill-beginning2" parent="." instance=ExtResource("46_f8igi")]
 
-[node name="cliff_cornerInnerTop_rock2" parent="." instance=ExtResource("47_ydyos")]
+[node name="railroad-straight-hill-complete-half2" parent="." instance=ExtResource("47_lwlsi")]
 
-[node name="cliff_cornerInnerTop_stone2" parent="." instance=ExtResource("48_dba47")]
+[node name="railroad-straight-hill-complete2" parent="." instance=ExtResource("48_0c4bb")]
 
-[node name="cliff_cornerInner_rock2" parent="." instance=ExtResource("49_w1qq1")]
+[node name="railroad-straight-hill-end2" parent="." instance=ExtResource("49_s8x5q")]
 
-[node name="cliff_cornerInner_stone2" parent="." instance=ExtResource("50_iplow")]
+[node name="railroad-straight-skew-left-side2" parent="." instance=ExtResource("50_lirmi")]
 
-[node name="cliff_cornerLarge_rock2" parent="." instance=ExtResource("51_7m3fv")]
+[node name="railroad-straight-skew-left2" parent="." instance=ExtResource("51_5mhhb")]
 
-[node name="cliff_cornerLarge_stone2" parent="." instance=ExtResource("52_ryovu")]
+[node name="railroad-straight-skew-right-side2" parent="." instance=ExtResource("52_u54jl")]
 
-[node name="cliff_cornerTop_rock2" parent="." instance=ExtResource("53_3s5yi")]
+[node name="railroad-straight-skew-right2" parent="." instance=ExtResource("53_7fmg3")]
 
-[node name="cliff_cornerTop_stone2" parent="." instance=ExtResource("54_7pfpt")]
+[node name="railroad-straight2" parent="." instance=ExtResource("54_c2euu")]
 
-[node name="cliff_corner_rock2" parent="." instance=ExtResource("55_ka55e")]
+[node name="spline-segment2" parent="." instance=ExtResource("55_x1ey3")]
 
-[node name="cliff_corner_stone2" parent="." instance=ExtResource("56_d6ow4")]
+[node name="spline-track-damaged2" parent="." instance=ExtResource("56_is05k")]
 
-[node name="cliff_diagonal_rock2" parent="." instance=ExtResource("57_8xygi")]
+[node name="spline-track2" parent="." instance=ExtResource("57_7nvls")]
 
-[node name="cliff_diagonal_stone2" parent="." instance=ExtResource("58_s6y7d")]
+[node name="track-detailed2" parent="." instance=ExtResource("58_atl0b")]
 
-[node name="cliff_halfCornerInner_rock2" parent="." instance=ExtResource("59_pydak")]
+[node name="track-single-detailed2" parent="." instance=ExtResource("59_jv5b4")]
 
-[node name="cliff_halfCornerInner_stone2" parent="." instance=ExtResource("60_sjlcj")]
+[node name="track-single2" parent="." instance=ExtResource("60_bnc2d")]
 
-[node name="cliff_halfCorner_rock2" parent="." instance=ExtResource("61_6ypeb")]
+[node name="track2" parent="." instance=ExtResource("61_6v1r7")]
 
-[node name="cliff_halfCorner_stone2" parent="." instance=ExtResource("62_17c4h")]
+[node name="train-carriage-box2" parent="." instance=ExtResource("62_xv5g3")]
 
-[node name="cliff_half_rock2" parent="." instance=ExtResource("63_y0pgv")]
+[node name="train-carriage-coal2" parent="." instance=ExtResource("63_h04g1")]
 
-[node name="cliff_half_stone2" parent="." instance=ExtResource("64_4muio")]
+[node name="train-carriage-container-blue2" parent="." instance=ExtResource("64_7580w")]
 
-[node name="cliff_large_rock2" parent="." instance=ExtResource("65_1t64k")]
+[node name="train-carriage-container-green2" parent="." instance=ExtResource("65_ne68c")]
 
-[node name="cliff_large_stone2" parent="." instance=ExtResource("66_5q2u3")]
+[node name="train-carriage-container-red2" parent="." instance=ExtResource("66_or46l")]
 
-[node name="cliff_rock2" parent="." instance=ExtResource("67_qqs4w")]
+[node name="train-carriage-dirt2" parent="." instance=ExtResource("67_6ijb4")]
 
-[node name="cliff_stepsCornerInner_rock2" parent="." instance=ExtResource("68_odruo")]
+[node name="train-carriage-flatbed-wood2" parent="." instance=ExtResource("68_c1w4e")]
 
-[node name="cliff_stepsCornerInner_stone2" parent="." instance=ExtResource("69_jte2n")]
+[node name="train-carriage-flatbed2" parent="." instance=ExtResource("69_plqge")]
 
-[node name="cliff_stepsCorner_rock2" parent="." instance=ExtResource("70_gna1x")]
+[node name="train-carriage-lumber2" parent="." instance=ExtResource("70_17sgo")]
 
-[node name="cliff_stepsCorner_stone2" parent="." instance=ExtResource("71_imyry")]
+[node name="train-carriage-tank-large2" parent="." instance=ExtResource("71_qakrr")]
 
-[node name="cliff_steps_rock2" parent="." instance=ExtResource("72_f1n6y")]
+[node name="train-carriage-tank2" parent="." instance=ExtResource("72_32tyk")]
 
-[node name="cliff_steps_stone2" parent="." instance=ExtResource("73_7ja3s")]
+[node name="train-carriage-wood2" parent="." instance=ExtResource("73_uo2wt")]
 
-[node name="cliff_stone2" parent="." instance=ExtResource("74_cw8sn")]
+[node name="train-connector2" parent="." instance=ExtResource("74_k43v2")]
 
-[node name="cliff_topDiagonal_rock2" parent="." instance=ExtResource("75_ydpgk")]
+[node name="train-diesel-a2" parent="." instance=ExtResource("75_cpyae")]
 
-[node name="cliff_topDiagonal_stone2" parent="." instance=ExtResource("76_wqqul")]
+[node name="train-diesel-b2" parent="." instance=ExtResource("76_0i6na")]
 
-[node name="cliff_top_rock2" parent="." instance=ExtResource("77_coynq")]
+[node name="train-diesel-box-a2" parent="." instance=ExtResource("77_rklvb")]
 
-[node name="cliff_top_stone2" parent="." instance=ExtResource("78_38yea")]
+[node name="train-diesel-box-b2" parent="." instance=ExtResource("78_1r70t")]
 
-[node name="cliff_waterfallTop_rock2" parent="." instance=ExtResource("79_pg8ow")]
+[node name="train-diesel-box-c2" parent="." instance=ExtResource("79_if32a")]
 
-[node name="cliff_waterfallTop_stone2" parent="." instance=ExtResource("80_62u0h")]
+[node name="train-diesel-c2" parent="." instance=ExtResource("80_63l56")]
 
-[node name="cliff_waterfall_rock2" parent="." instance=ExtResource("81_l6ibt")]
+[node name="train-electric-bullet-a2" parent="." instance=ExtResource("81_gwf3o")]
 
-[node name="cliff_waterfall_stone2" parent="." instance=ExtResource("82_tg1oc")]
+[node name="train-electric-bullet-b2" parent="." instance=ExtResource("82_beyfn")]
 
-[node name="crops_bambooStageA2" parent="." instance=ExtResource("83_2e3sa")]
+[node name="train-electric-bullet-c2" parent="." instance=ExtResource("83_vblst")]
 
-[node name="crops_bambooStageB2" parent="." instance=ExtResource("84_ubpmk")]
+[node name="train-electric-city-a2" parent="." instance=ExtResource("84_1l7td")]
 
-[node name="crops_cornStageA2" parent="." instance=ExtResource("85_1macq")]
+[node name="train-electric-city-b2" parent="." instance=ExtResource("85_4aicn")]
 
-[node name="crops_cornStageB2" parent="." instance=ExtResource("86_bpjlm")]
+[node name="train-electric-city-c2" parent="." instance=ExtResource("86_equ6e")]
 
-[node name="crops_cornStageC2" parent="." instance=ExtResource("87_1y1kn")]
+[node name="train-electric-double-a2" parent="." instance=ExtResource("87_i7nfs")]
 
-[node name="crops_cornStageD2" parent="." instance=ExtResource("88_l66kh")]
+[node name="train-electric-double-b2" parent="." instance=ExtResource("88_tnsgl")]
 
-[node name="crops_dirtDoubleRow2" parent="." instance=ExtResource("89_m1mh1")]
+[node name="train-electric-double-c2" parent="." instance=ExtResource("89_qnmx4")]
 
-[node name="crops_dirtDoubleRowCorner2" parent="." instance=ExtResource("90_t52lg")]
+[node name="train-electric-square-a2" parent="." instance=ExtResource("90_a7ixv")]
 
-[node name="crops_dirtDoubleRowEnd2" parent="." instance=ExtResource("91_ik38y")]
+[node name="train-electric-square-b2" parent="." instance=ExtResource("91_j3b5a")]
 
-[node name="crops_dirtRow2" parent="." instance=ExtResource("92_turab")]
+[node name="train-electric-square-c2" parent="." instance=ExtResource("92_ssyhl")]
 
-[node name="crops_dirtRowCorner2" parent="." instance=ExtResource("93_qyj2c")]
+[node name="train-electric-subway-a2" parent="." instance=ExtResource("93_hgu4u")]
 
-[node name="crops_dirtRowEnd2" parent="." instance=ExtResource("94_y5b5a")]
+[node name="train-electric-subway-b2" parent="." instance=ExtResource("94_bvtra")]
 
-[node name="crops_dirtSingle2" parent="." instance=ExtResource("95_r3rlg")]
+[node name="train-electric-subway-c2" parent="." instance=ExtResource("95_saiu5")]
 
-[node name="crops_leafsStageA2" parent="." instance=ExtResource("96_54soy")]
+[node name="train-locomotive-a2" parent="." instance=ExtResource("96_mrhbg")]
 
-[node name="crops_leafsStageB2" parent="." instance=ExtResource("97_hgr48")]
+[node name="train-locomotive-b2" parent="." instance=ExtResource("97_pvg22")]
 
-[node name="crops_wheatStageA2" parent="." instance=ExtResource("98_absos")]
+[node name="train-locomotive-c2" parent="." instance=ExtResource("98_bcbsq")]
 
-[node name="crops_wheatStageB2" parent="." instance=ExtResource("99_8pe7u")]
+[node name="train-locomotive-passenger-a2" parent="." instance=ExtResource("99_wnjum")]
 
-[node name="crop_carrot2" parent="." instance=ExtResource("100_3t4b0")]
+[node name="train-locomotive-passenger-b2" parent="." instance=ExtResource("100_nby80")]
 
-[node name="crop_melon2" parent="." instance=ExtResource("101_3issx")]
+[node name="train-tram-classic2" parent="." instance=ExtResource("101_oci76")]
 
-[node name="crop_pumpkin2" parent="." instance=ExtResource("102_oe4ax")]
+[node name="train-tram-modern2" parent="." instance=ExtResource("102_k0b6c")]
 
-[node name="crop_turnip2" parent="." instance=ExtResource("103_stfw1")]
-
-[node name="fence_bend2" parent="." instance=ExtResource("104_doyyy")]
-
-[node name="fence_bendCenter2" parent="." instance=ExtResource("105_5cyid")]
-
-[node name="fence_corner2" parent="." instance=ExtResource("106_54jew")]
-
-[node name="fence_gate2" parent="." instance=ExtResource("107_lm3j7")]
-
-[node name="fence_planks2" parent="." instance=ExtResource("108_38vam")]
-
-[node name="fence_planksDouble2" parent="." instance=ExtResource("109_oy1jq")]
-
-[node name="fence_simple2" parent="." instance=ExtResource("110_w2r0v")]
-
-[node name="fence_simpleCenter2" parent="." instance=ExtResource("111_7fwg0")]
-
-[node name="fence_simpleDiagonal2" parent="." instance=ExtResource("112_1j3o5")]
-
-[node name="fence_simpleDiagonalCenter2" parent="." instance=ExtResource("113_y3vjt")]
-
-[node name="fence_simpleHigh2" parent="." instance=ExtResource("114_i6sbd")]
-
-[node name="fence_simpleLow2" parent="." instance=ExtResource("115_7o4oh")]
-
-[node name="flower_purpleA2" parent="." instance=ExtResource("116_vmfio")]
-
-[node name="flower_purpleB2" parent="." instance=ExtResource("117_wt383")]
-
-[node name="flower_purpleC2" parent="." instance=ExtResource("118_ors2q")]
-
-[node name="flower_redA2" parent="." instance=ExtResource("119_icxss")]
-
-[node name="flower_redB2" parent="." instance=ExtResource("120_3mt4y")]
-
-[node name="flower_redC2" parent="." instance=ExtResource("121_ctjsx")]
-
-[node name="flower_yellowA2" parent="." instance=ExtResource("122_0ilb0")]
-
-[node name="flower_yellowB2" parent="." instance=ExtResource("123_y078j")]
-
-[node name="flower_yellowC2" parent="." instance=ExtResource("124_eu8il")]
-
-[node name="grass2" parent="." instance=ExtResource("125_e60ak")]
-
-[node name="grass_large2" parent="." instance=ExtResource("126_2unxv")]
-
-[node name="grass_leafs2" parent="." instance=ExtResource("127_jik6p")]
-
-[node name="grass_leafsLarge2" parent="." instance=ExtResource("128_sgm1x")]
-
-[node name="ground_grass2" parent="." instance=ExtResource("129_ysfn5")]
-
-[node name="ground_pathBend2" parent="." instance=ExtResource("130_10i8x")]
-
-[node name="ground_pathBendBank2" parent="." instance=ExtResource("131_43p36")]
-
-[node name="ground_pathCorner2" parent="." instance=ExtResource("132_vhxtl")]
-
-[node name="ground_pathCornerSmall2" parent="." instance=ExtResource("133_kwu53")]
-
-[node name="ground_pathCross2" parent="." instance=ExtResource("134_7y2wa")]
-
-[node name="ground_pathEnd2" parent="." instance=ExtResource("135_h2rcp")]
-
-[node name="ground_pathEndClosed2" parent="." instance=ExtResource("136_iachx")]
-
-[node name="ground_pathOpen2" parent="." instance=ExtResource("137_r5tvp")]
-
-[node name="ground_pathRocks2" parent="." instance=ExtResource("138_0quk4")]
-
-[node name="ground_pathSide2" parent="." instance=ExtResource("139_i5wxq")]
-
-[node name="ground_pathSideOpen2" parent="." instance=ExtResource("140_thdf2")]
-
-[node name="ground_pathSplit2" parent="." instance=ExtResource("141_gdtes")]
-
-[node name="ground_pathStraight2" parent="." instance=ExtResource("142_d2evr")]
-
-[node name="ground_pathTile2" parent="." instance=ExtResource("143_l5il1")]
-
-[node name="ground_riverBend2" parent="." instance=ExtResource("144_p7giy")]
-
-[node name="ground_riverBendBank2" parent="." instance=ExtResource("145_d4mel")]
-
-[node name="ground_riverCorner2" parent="." instance=ExtResource("146_bhsnm")]
-
-[node name="ground_riverCornerSmall2" parent="." instance=ExtResource("147_doebw")]
-
-[node name="ground_riverCross2" parent="." instance=ExtResource("148_dk8c2")]
-
-[node name="ground_riverEnd2" parent="." instance=ExtResource("149_wvxaf")]
-
-[node name="ground_riverEndClosed2" parent="." instance=ExtResource("150_q5dhd")]
-
-[node name="ground_riverOpen2" parent="." instance=ExtResource("151_aaqdl")]
-
-[node name="ground_riverRocks2" parent="." instance=ExtResource("152_3us07")]
-
-[node name="ground_riverSide2" parent="." instance=ExtResource("153_f3r0r")]
-
-[node name="ground_riverSideOpen2" parent="." instance=ExtResource("154_52jpo")]
-
-[node name="ground_riverSplit2" parent="." instance=ExtResource("155_1q4h7")]
-
-[node name="ground_riverStraight2" parent="." instance=ExtResource("156_f50gv")]
-
-[node name="ground_riverTile2" parent="." instance=ExtResource("157_s6gog")]
-
-[node name="hanging_moss2" parent="." instance=ExtResource("158_w8gae")]
-
-[node name="lily_large2" parent="." instance=ExtResource("159_a3jqd")]
-
-[node name="lily_small2" parent="." instance=ExtResource("160_l1lcb")]
-
-[node name="log2" parent="." instance=ExtResource("161_4sfhq")]
-
-[node name="log_large2" parent="." instance=ExtResource("162_60l33")]
-
-[node name="log_stack2" parent="." instance=ExtResource("163_a3pxd")]
-
-[node name="log_stackLarge2" parent="." instance=ExtResource("164_wmmx7")]
-
-[node name="mushroom_red2" parent="." instance=ExtResource("165_u8740")]
-
-[node name="mushroom_redGroup2" parent="." instance=ExtResource("166_thmhf")]
-
-[node name="mushroom_redTall2" parent="." instance=ExtResource("167_d1xx8")]
-
-[node name="mushroom_tan2" parent="." instance=ExtResource("168_epbkj")]
-
-[node name="mushroom_tanGroup2" parent="." instance=ExtResource("169_n8fx7")]
-
-[node name="mushroom_tanTall2" parent="." instance=ExtResource("170_7i1ot")]
-
-[node name="path_stone2" parent="." instance=ExtResource("171_wg8gj")]
-
-[node name="path_stoneCircle2" parent="." instance=ExtResource("172_kh5ve")]
-
-[node name="path_stoneCorner2" parent="." instance=ExtResource("173_q2ai5")]
-
-[node name="path_stoneEnd2" parent="." instance=ExtResource("174_mph5v")]
-
-[node name="path_wood2" parent="." instance=ExtResource("175_h7m1b")]
-
-[node name="path_woodCorner2" parent="." instance=ExtResource("176_cknqp")]
-
-[node name="path_woodEnd2" parent="." instance=ExtResource("177_mqfe8")]
-
-[node name="plant_bush2" parent="." instance=ExtResource("178_gy187")]
-
-[node name="plant_bushDetailed2" parent="." instance=ExtResource("179_4g7qt")]
-
-[node name="plant_bushLarge2" parent="." instance=ExtResource("180_y5bs3")]
-
-[node name="plant_bushLargeTriangle2" parent="." instance=ExtResource("181_jx5pt")]
-
-[node name="plant_bushSmall2" parent="." instance=ExtResource("182_coehw")]
-
-[node name="plant_bushTriangle2" parent="." instance=ExtResource("183_5wgq7")]
-
-[node name="plant_flatShort2" parent="." instance=ExtResource("184_0uiry")]
-
-[node name="plant_flatTall2" parent="." instance=ExtResource("185_7h2or")]
-
-[node name="platform_beach2" parent="." instance=ExtResource("186_l3eod")]
-
-[node name="platform_grass2" parent="." instance=ExtResource("187_dds0s")]
-
-[node name="platform_stone2" parent="." instance=ExtResource("188_7y2jd")]
-
-[node name="pot_large2" parent="." instance=ExtResource("189_il4om")]
-
-[node name="pot_small2" parent="." instance=ExtResource("190_uc27y")]
-
-[node name="rock_largeA2" parent="." instance=ExtResource("191_mcwiq")]
-
-[node name="rock_largeB2" parent="." instance=ExtResource("192_kcd27")]
-
-[node name="rock_largeC2" parent="." instance=ExtResource("193_ernmh")]
-
-[node name="rock_largeD2" parent="." instance=ExtResource("194_jcihr")]
-
-[node name="rock_largeE2" parent="." instance=ExtResource("195_tojtb")]
-
-[node name="rock_largeF2" parent="." instance=ExtResource("196_n4pwh")]
-
-[node name="rock_smallA2" parent="." instance=ExtResource("197_himqo")]
-
-[node name="rock_smallB2" parent="." instance=ExtResource("198_pu5su")]
-
-[node name="rock_smallC2" parent="." instance=ExtResource("199_7kiol")]
-
-[node name="rock_smallD2" parent="." instance=ExtResource("200_b80hj")]
-
-[node name="rock_smallE2" parent="." instance=ExtResource("201_wigj1")]
-
-[node name="rock_smallF2" parent="." instance=ExtResource("202_oelxv")]
-
-[node name="rock_smallFlatA2" parent="." instance=ExtResource("203_k2jyd")]
-
-[node name="rock_smallFlatB2" parent="." instance=ExtResource("204_o0y4j")]
-
-[node name="rock_smallFlatC2" parent="." instance=ExtResource("205_bn17p")]
-
-[node name="rock_smallG2" parent="." instance=ExtResource("206_2t2r4")]
-
-[node name="rock_smallH2" parent="." instance=ExtResource("207_63tlc")]
-
-[node name="rock_smallI2" parent="." instance=ExtResource("208_p3wvb")]
-
-[node name="rock_smallTopA2" parent="." instance=ExtResource("209_q8o1r")]
-
-[node name="rock_smallTopB2" parent="." instance=ExtResource("210_veu8o")]
-
-[node name="rock_tallA2" parent="." instance=ExtResource("211_si5wj")]
-
-[node name="rock_tallB2" parent="." instance=ExtResource("212_ynt1s")]
-
-[node name="rock_tallC2" parent="." instance=ExtResource("213_ibs2d")]
-
-[node name="rock_tallD2" parent="." instance=ExtResource("214_tqc4n")]
-
-[node name="rock_tallE2" parent="." instance=ExtResource("215_pn4f5")]
-
-[node name="rock_tallF2" parent="." instance=ExtResource("216_3tfr7")]
-
-[node name="rock_tallG2" parent="." instance=ExtResource("217_1q0qb")]
-
-[node name="rock_tallH2" parent="." instance=ExtResource("218_7qgxk")]
-
-[node name="rock_tallI2" parent="." instance=ExtResource("219_n8dwo")]
-
-[node name="rock_tallJ2" parent="." instance=ExtResource("220_l4uf5")]
-
-[node name="sign2" parent="." instance=ExtResource("221_2rscc")]
-
-[node name="statue_block2" parent="." instance=ExtResource("222_o8v7i")]
-
-[node name="statue_column2" parent="." instance=ExtResource("223_c7oea")]
-
-[node name="statue_columnDamaged2" parent="." instance=ExtResource("224_afl43")]
-
-[node name="statue_head2" parent="." instance=ExtResource("225_mimbb")]
-
-[node name="statue_obelisk2" parent="." instance=ExtResource("226_f2ek4")]
-
-[node name="statue_ring2" parent="." instance=ExtResource("227_f4kpf")]
-
-[node name="stone_largeA2" parent="." instance=ExtResource("228_2shhh")]
-
-[node name="stone_largeB2" parent="." instance=ExtResource("229_p54ys")]
-
-[node name="stone_largeC2" parent="." instance=ExtResource("230_ck1tr")]
-
-[node name="stone_largeD2" parent="." instance=ExtResource("231_wcgb1")]
-
-[node name="stone_largeE2" parent="." instance=ExtResource("232_gsqdh")]
-
-[node name="stone_largeF2" parent="." instance=ExtResource("233_yoh16")]
-
-[node name="stone_smallA2" parent="." instance=ExtResource("234_go6cy")]
-
-[node name="stone_smallB2" parent="." instance=ExtResource("235_7ptdy")]
-
-[node name="stone_smallC2" parent="." instance=ExtResource("236_pymib")]
-
-[node name="stone_smallD2" parent="." instance=ExtResource("237_ns2cw")]
-
-[node name="stone_smallE2" parent="." instance=ExtResource("238_h5ejd")]
-
-[node name="stone_smallF2" parent="." instance=ExtResource("239_4wh8v")]
-
-[node name="stone_smallFlatA2" parent="." instance=ExtResource("240_sw71i")]
-
-[node name="stone_smallFlatB2" parent="." instance=ExtResource("241_sqgeg")]
-
-[node name="stone_smallFlatC2" parent="." instance=ExtResource("242_15top")]
-
-[node name="stone_smallG2" parent="." instance=ExtResource("243_v1mpt")]
-
-[node name="stone_smallH2" parent="." instance=ExtResource("244_owkl7")]
-
-[node name="stone_smallI2" parent="." instance=ExtResource("245_htyb2")]
-
-[node name="stone_smallTopA2" parent="." instance=ExtResource("246_o57jq")]
-
-[node name="stone_smallTopB2" parent="." instance=ExtResource("247_wo3w4")]
-
-[node name="stone_tallA2" parent="." instance=ExtResource("248_5dt31")]
-
-[node name="stone_tallB2" parent="." instance=ExtResource("249_a5mtf")]
-
-[node name="stone_tallC2" parent="." instance=ExtResource("250_jnyjr")]
-
-[node name="stone_tallD2" parent="." instance=ExtResource("251_gkngy")]
-
-[node name="stone_tallE2" parent="." instance=ExtResource("252_a0c8e")]
-
-[node name="stone_tallF2" parent="." instance=ExtResource("253_xqmb1")]
-
-[node name="stone_tallG2" parent="." instance=ExtResource("254_fqna8")]
-
-[node name="stone_tallH2" parent="." instance=ExtResource("255_ixp6x")]
-
-[node name="stone_tallI2" parent="." instance=ExtResource("256_6vbp6")]
-
-[node name="stone_tallJ2" parent="." instance=ExtResource("257_qx070")]
-
-[node name="stump_old2" parent="." instance=ExtResource("258_oe35n")]
-
-[node name="stump_oldTall2" parent="." instance=ExtResource("259_mu8os")]
-
-[node name="stump_round2" parent="." instance=ExtResource("260_utfcj")]
-
-[node name="stump_roundDetailed2" parent="." instance=ExtResource("261_trtfa")]
-
-[node name="stump_square2" parent="." instance=ExtResource("262_wh4uj")]
-
-[node name="stump_squareDetailed2" parent="." instance=ExtResource("263_c0a7d")]
-
-[node name="stump_squareDetailedWide2" parent="." instance=ExtResource("264_fkw77")]
-
-[node name="tent_detailedClosed2" parent="." instance=ExtResource("265_86j26")]
-
-[node name="tent_detailedOpen2" parent="." instance=ExtResource("266_nyuxe")]
-
-[node name="tent_smallClosed2" parent="." instance=ExtResource("267_mxanm")]
-
-[node name="tent_smallOpen2" parent="." instance=ExtResource("268_84tc4")]
-
-[node name="tree_blocks2" parent="." instance=ExtResource("269_e3ww3")]
-
-[node name="tree_blocks_dark2" parent="." instance=ExtResource("270_3wf6i")]
-
-[node name="tree_blocks_fall2" parent="." instance=ExtResource("271_c85v4")]
-
-[node name="tree_cone2" parent="." instance=ExtResource("272_ufvmn")]
-
-[node name="tree_cone_dark2" parent="." instance=ExtResource("273_383ic")]
-
-[node name="tree_cone_fall2" parent="." instance=ExtResource("274_52abk")]
-
-[node name="tree_default2" parent="." instance=ExtResource("275_2rw7v")]
-
-[node name="tree_default_dark2" parent="." instance=ExtResource("276_qscmv")]
-
-[node name="tree_default_fall2" parent="." instance=ExtResource("277_6vm8d")]
-
-[node name="tree_detailed2" parent="." instance=ExtResource("278_wmdyv")]
-
-[node name="tree_detailed_dark2" parent="." instance=ExtResource("279_s8qu3")]
-
-[node name="tree_detailed_fall2" parent="." instance=ExtResource("280_enhdm")]
-
-[node name="tree_fat2" parent="." instance=ExtResource("281_yd5b2")]
-
-[node name="tree_fat_darkh2" parent="." instance=ExtResource("282_8080u")]
-
-[node name="tree_fat_fall2" parent="." instance=ExtResource("283_65b6r")]
-
-[node name="tree_oak2" parent="." instance=ExtResource("284_8g3yp")]
-
-[node name="tree_oak_dark2" parent="." instance=ExtResource("285_jtavu")]
-
-[node name="tree_oak_fall2" parent="." instance=ExtResource("286_b0uua")]
-
-[node name="tree_palm2" parent="." instance=ExtResource("287_xeyqu")]
-
-[node name="tree_palmBend2" parent="." instance=ExtResource("288_7i60g")]
-
-[node name="tree_palmDetailedShort2" parent="." instance=ExtResource("289_w6jbu")]
-
-[node name="tree_palmDetailedTall2" parent="." instance=ExtResource("290_umimg")]
-
-[node name="tree_palmShort2" parent="." instance=ExtResource("291_xtxqw")]
-
-[node name="tree_palmTall2" parent="." instance=ExtResource("292_w588d")]
-
-[node name="tree_pineDefaultA2" parent="." instance=ExtResource("293_6pdgx")]
-
-[node name="tree_pineDefaultB2" parent="." instance=ExtResource("294_tij8b")]
-
-[node name="tree_pineGroundA2" parent="." instance=ExtResource("295_w1mi1")]
-
-[node name="tree_pineGroundB2" parent="." instance=ExtResource("296_nihg7")]
-
-[node name="tree_pineRoundA2" parent="." instance=ExtResource("297_m57wf")]
-
-[node name="tree_pineRoundB2" parent="." instance=ExtResource("298_6sf20")]
-
-[node name="tree_pineRoundC2" parent="." instance=ExtResource("299_sn710")]
-
-[node name="tree_pineRoundD2" parent="." instance=ExtResource("300_8blay")]
-
-[node name="tree_pineRoundE2" parent="." instance=ExtResource("301_dwtkg")]
-
-[node name="tree_pineRoundF2" parent="." instance=ExtResource("302_ctgil")]
-
-[node name="tree_pineSmallA2" parent="." instance=ExtResource("303_cc0o0")]
-
-[node name="tree_pineSmallB2" parent="." instance=ExtResource("304_t24vc")]
-
-[node name="tree_pineSmallC2" parent="." instance=ExtResource("305_gwjc3")]
-
-[node name="tree_pineSmallD2" parent="." instance=ExtResource("306_rehyh")]
-
-[node name="tree_pineTallA2" parent="." instance=ExtResource("307_5pcj1")]
-
-[node name="tree_pineTallA_detailed2" parent="." instance=ExtResource("308_4qxav")]
-
-[node name="tree_pineTallB2" parent="." instance=ExtResource("309_sruwr")]
-
-[node name="tree_pineTallB_detailed2" parent="." instance=ExtResource("310_wgtyi")]
-
-[node name="tree_pineTallC2" parent="." instance=ExtResource("311_37g8l")]
-
-[node name="tree_pineTallC_detailed2" parent="." instance=ExtResource("312_26f65")]
-
-[node name="tree_pineTallD2" parent="." instance=ExtResource("313_b4da3")]
-
-[node name="tree_pineTallD_detailed2" parent="." instance=ExtResource("314_tqqda")]
-
-[node name="tree_plateau2" parent="." instance=ExtResource("315_h17xr")]
-
-[node name="tree_plateau_dark2" parent="." instance=ExtResource("316_v6dt0")]
-
-[node name="tree_plateau_fall2" parent="." instance=ExtResource("317_32ncf")]
-
-[node name="tree_simple2" parent="." instance=ExtResource("318_jcns0")]
-
-[node name="tree_simple_dark2" parent="." instance=ExtResource("319_376nf")]
-
-[node name="tree_simple_fall2" parent="." instance=ExtResource("320_0py2t")]
-
-[node name="tree_small2" parent="." instance=ExtResource("321_wksnb")]
-
-[node name="tree_small_dark2" parent="." instance=ExtResource("322_qvrs7")]
-
-[node name="tree_small_fall2" parent="." instance=ExtResource("323_qbrks")]
-
-[node name="tree_tall2" parent="." instance=ExtResource("324_lwwmm")]
-
-[node name="tree_tall_dark2" parent="." instance=ExtResource("325_jttt8")]
-
-[node name="tree_tall_fall2" parent="." instance=ExtResource("326_kqpt2")]
-
-[node name="tree_thin2" parent="." instance=ExtResource("327_1dgda")]
-
-[node name="tree_thin_dark2" parent="." instance=ExtResource("328_kg0t1")]
-
-[node name="tree_thin_fall2" parent="." instance=ExtResource("329_y6e72")]
+[node name="train-tram-round2" parent="." instance=ExtResource("103_s8f45")]
