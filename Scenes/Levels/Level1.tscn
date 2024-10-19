@@ -3,10 +3,14 @@
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_nr7ws"]
 [ext_resource type="PackedScene" uid="uid://cg1pgl7dxjhfj" path="res://Scenes/UI/LevelUi.tscn" id="1_w7qxa"]
 [ext_resource type="MeshLibrary" uid="uid://rjysh0cisd0j" path="res://Resources/MeshLibrairy/WorldLibrary.tres" id="2_nqvwi"]
-[ext_resource type="MeshLibrary" uid="uid://qxkdtdey5x5i" path="res://Resources/MeshLibrairy/RailsLibrairy.tres" id="3_lilda"]
+[ext_resource type="MeshLibrary" uid="uid://1sxkutuqlxv6" path="res://Resources/MeshLibrairy/RailsLibrary.tres" id="4_hyclq"]
 
 [node name="Level1" type="Node3D"]
 script = ExtResource("1_nr7ws")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelUi" parent="CanvasLayer" instance=ExtResource("1_w7qxa")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707106, 0.707106, 0, -0.707106, 0.707106, 0, 7.415, 3.1)
@@ -20,13 +24,9 @@ data = {
 }
 
 [node name="RailGrid" type="GridMap" parent="."]
-mesh_library = ExtResource("3_lilda")
+mesh_library = ExtResource("4_hyclq")
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="LevelUi" parent="CanvasLayer" instance=ExtResource("1_w7qxa")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.827571, 0.561361, 0, -0.561361, 0.827571, 0, 3.57485, 0)
