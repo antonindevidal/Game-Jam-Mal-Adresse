@@ -1,0 +1,313 @@
+[gd_scene load_steps=104 format=3 uid="uid://bh8lao8eocmg"]
+
+[ext_resource type="PackedScene" uid="uid://dqsh5c2chxsvm" path="res://Resources/Models/Trains/railroad-corner-large-ramp.glb" id="1_j1mws"]
+[ext_resource type="PackedScene" uid="uid://bqcjgliq4w76h" path="res://Resources/Models/Trains/railroad-corner-large.glb" id="2_2r5d5"]
+[ext_resource type="PackedScene" uid="uid://clb1deu253tj6" path="res://Resources/Models/Trains/railroad-corner-small-ramp.glb" id="3_f3iog"]
+[ext_resource type="PackedScene" uid="uid://bqwvsqhybhy6l" path="res://Resources/Models/Trains/railroad-corner-small.glb" id="4_i2u23"]
+[ext_resource type="PackedScene" uid="uid://dpilqc7gv3le6" path="res://Resources/Models/Trains/railroad-curve.glb" id="5_olf72"]
+[ext_resource type="PackedScene" uid="uid://bad708vn4t278" path="res://Resources/Models/Trains/railroad-damaged-corner-large-ramp.glb" id="6_t6lql"]
+[ext_resource type="PackedScene" uid="uid://t41psa475s8u" path="res://Resources/Models/Trains/railroad-damaged-corner-large.glb" id="7_m5h4i"]
+[ext_resource type="PackedScene" uid="uid://b50g51dsv4myj" path="res://Resources/Models/Trains/railroad-damaged-corner-small-ramp.glb" id="8_elwfb"]
+[ext_resource type="PackedScene" uid="uid://lv8jqt2nn3qu" path="res://Resources/Models/Trains/railroad-damaged-corner-small.glb" id="9_pb0q0"]
+[ext_resource type="PackedScene" uid="uid://dao5jmbrrnt3j" path="res://Resources/Models/Trains/railroad-damaged-curve.glb" id="10_w4pj4"]
+[ext_resource type="PackedScene" uid="uid://dwaev12x6myps" path="res://Resources/Models/Trains/railroad-damaged-straight-bend-large.glb" id="11_r88x6"]
+[ext_resource type="PackedScene" uid="uid://c10v3p5651pmn" path="res://Resources/Models/Trains/railroad-damaged-straight-bend.glb" id="12_irkq7"]
+[ext_resource type="PackedScene" uid="uid://ber5eke4w8s6t" path="res://Resources/Models/Trains/railroad-damaged-straight-bump-down.glb" id="13_2g28h"]
+[ext_resource type="PackedScene" uid="uid://bam0ku6eftphs" path="res://Resources/Models/Trains/railroad-damaged-straight-bump-up.glb" id="14_68p57"]
+[ext_resource type="PackedScene" uid="uid://b6btcb1jldyqn" path="res://Resources/Models/Trains/railroad-damaged-straight-hill-beginning.glb" id="15_wqiq6"]
+[ext_resource type="PackedScene" uid="uid://dlvf32hjfea2p" path="res://Resources/Models/Trains/railroad-damaged-straight-hill-complete-half.glb" id="16_j4qog"]
+[ext_resource type="PackedScene" uid="uid://jngv767wjqjr" path="res://Resources/Models/Trains/railroad-damaged-straight-hill-complete.glb" id="17_v2q6n"]
+[ext_resource type="PackedScene" uid="uid://bwmyfikiiih3o" path="res://Resources/Models/Trains/railroad-damaged-straight-hill-end.glb" id="18_5bnyy"]
+[ext_resource type="PackedScene" uid="uid://kgwnduq2bo4k" path="res://Resources/Models/Trains/railroad-damaged-straight-skew-left-side.glb" id="19_oojqa"]
+[ext_resource type="PackedScene" uid="uid://cm4pidtq6hqab" path="res://Resources/Models/Trains/railroad-damaged-straight-skew-left.glb" id="20_x1x8e"]
+[ext_resource type="PackedScene" uid="uid://ckmoticoxipkc" path="res://Resources/Models/Trains/railroad-damaged-straight-skew-right-side.glb" id="21_563l4"]
+[ext_resource type="PackedScene" uid="uid://bcquq5pmg1w4r" path="res://Resources/Models/Trains/railroad-damaged-straight-skew-right.glb" id="22_fxcf7"]
+[ext_resource type="PackedScene" uid="uid://n3l6pm00xd3r" path="res://Resources/Models/Trains/railroad-damaged-straight.glb" id="23_stbfc"]
+[ext_resource type="PackedScene" uid="uid://c444p4g1aabpj" path="res://Resources/Models/Trains/railroad-rail-corner-large-ramp.glb" id="24_em35f"]
+[ext_resource type="PackedScene" uid="uid://c35q1tg6yjtyo" path="res://Resources/Models/Trains/railroad-rail-corner-large.glb" id="25_r5hpe"]
+[ext_resource type="PackedScene" uid="uid://bpgwaq76nem3a" path="res://Resources/Models/Trains/railroad-rail-corner-small-ramp.glb" id="26_1p2ar"]
+[ext_resource type="PackedScene" uid="uid://0wqljpoa00hs" path="res://Resources/Models/Trains/railroad-rail-corner-small.glb" id="27_qsq7n"]
+[ext_resource type="PackedScene" uid="uid://42r5utwwugsr" path="res://Resources/Models/Trains/railroad-rail-curve.glb" id="28_2uptj"]
+[ext_resource type="PackedScene" uid="uid://dr1wa2eepajs0" path="res://Resources/Models/Trains/railroad-rail-straight-bend-large.glb" id="29_npho8"]
+[ext_resource type="PackedScene" uid="uid://c3tdn2nhg7xlb" path="res://Resources/Models/Trains/railroad-rail-straight-bend.glb" id="30_dwaa5"]
+[ext_resource type="PackedScene" uid="uid://ckavsev5g0hli" path="res://Resources/Models/Trains/railroad-rail-straight-bump-down.glb" id="31_fqh8d"]
+[ext_resource type="PackedScene" uid="uid://5tx8vlcjv1i0" path="res://Resources/Models/Trains/railroad-rail-straight-bump-up.glb" id="32_c2hnp"]
+[ext_resource type="PackedScene" uid="uid://dn5mgheyyfn7d" path="res://Resources/Models/Trains/railroad-rail-straight-hill-beginning.glb" id="33_y8pvf"]
+[ext_resource type="PackedScene" uid="uid://4mdhfnew2cfp" path="res://Resources/Models/Trains/railroad-rail-straight-hill-complete-half.glb" id="34_iopw1"]
+[ext_resource type="PackedScene" uid="uid://dlexl7vhk18tn" path="res://Resources/Models/Trains/railroad-rail-straight-hill-complete.glb" id="35_fsxf5"]
+[ext_resource type="PackedScene" uid="uid://cts5kf74kxlq3" path="res://Resources/Models/Trains/railroad-rail-straight-hill-end.glb" id="36_218nw"]
+[ext_resource type="PackedScene" uid="uid://s7iax8w58tmu" path="res://Resources/Models/Trains/railroad-rail-straight-skew-left-side.glb" id="37_hqy1m"]
+[ext_resource type="PackedScene" uid="uid://d24n4jhcjstf5" path="res://Resources/Models/Trains/railroad-rail-straight-skew-left.glb" id="38_eyhp2"]
+[ext_resource type="PackedScene" uid="uid://djwm3orvvaql3" path="res://Resources/Models/Trains/railroad-rail-straight-skew-right-side.glb" id="39_yffmm"]
+[ext_resource type="PackedScene" uid="uid://din246q0sxdl8" path="res://Resources/Models/Trains/railroad-rail-straight-skew-right.glb" id="40_34v84"]
+[ext_resource type="PackedScene" uid="uid://bp0owabjogvbn" path="res://Resources/Models/Trains/railroad-rail-straight.glb" id="41_rqfh6"]
+[ext_resource type="PackedScene" uid="uid://c8shx4elruig2" path="res://Resources/Models/Trains/railroad-straight-bend-large.glb" id="42_pk1mk"]
+[ext_resource type="PackedScene" uid="uid://db54ccrs2p1pe" path="res://Resources/Models/Trains/railroad-straight-bend.glb" id="43_u2kux"]
+[ext_resource type="PackedScene" uid="uid://yx55i6xjrkpm" path="res://Resources/Models/Trains/railroad-straight-bump-down.glb" id="44_xguwt"]
+[ext_resource type="PackedScene" uid="uid://xg02tupr6fck" path="res://Resources/Models/Trains/railroad-straight-bump-up.glb" id="45_4kq2s"]
+[ext_resource type="PackedScene" uid="uid://dvlh56bia6mqk" path="res://Resources/Models/Trains/railroad-straight-hill-beginning.glb" id="46_f8igi"]
+[ext_resource type="PackedScene" uid="uid://b7h0k2rpu6dy8" path="res://Resources/Models/Trains/railroad-straight-hill-complete-half.glb" id="47_lwlsi"]
+[ext_resource type="PackedScene" uid="uid://ctoyaxne4rdne" path="res://Resources/Models/Trains/railroad-straight-hill-complete.glb" id="48_0c4bb"]
+[ext_resource type="PackedScene" uid="uid://34uswn0wfqwt" path="res://Resources/Models/Trains/railroad-straight-hill-end.glb" id="49_s8x5q"]
+[ext_resource type="PackedScene" uid="uid://kn4t2qyje03g" path="res://Resources/Models/Trains/railroad-straight-skew-left-side.glb" id="50_lirmi"]
+[ext_resource type="PackedScene" uid="uid://clocms4oteitp" path="res://Resources/Models/Trains/railroad-straight-skew-left.glb" id="51_5mhhb"]
+[ext_resource type="PackedScene" uid="uid://cq5dr3e5haijt" path="res://Resources/Models/Trains/railroad-straight-skew-right-side.glb" id="52_u54jl"]
+[ext_resource type="PackedScene" uid="uid://bv4jrlmneatpf" path="res://Resources/Models/Trains/railroad-straight-skew-right.glb" id="53_7fmg3"]
+[ext_resource type="PackedScene" uid="uid://b2v5qqxmsfdo1" path="res://Resources/Models/Trains/railroad-straight.glb" id="54_c2euu"]
+[ext_resource type="PackedScene" uid="uid://d1bwtud0bb8b2" path="res://Resources/Models/Trains/spline-segment.glb" id="55_x1ey3"]
+[ext_resource type="PackedScene" uid="uid://cta74kr4g53p7" path="res://Resources/Models/Trains/spline-track-damaged.glb" id="56_is05k"]
+[ext_resource type="PackedScene" uid="uid://dvpslbrvcesor" path="res://Resources/Models/Trains/spline-track.glb" id="57_7nvls"]
+[ext_resource type="PackedScene" uid="uid://cgxlelv165x4a" path="res://Resources/Models/Trains/track-detailed.glb" id="58_atl0b"]
+[ext_resource type="PackedScene" uid="uid://yqn7t6sb71wa" path="res://Resources/Models/Trains/track-single-detailed.glb" id="59_jv5b4"]
+[ext_resource type="PackedScene" uid="uid://bu2hv67td1y46" path="res://Resources/Models/Trains/track-single.glb" id="60_bnc2d"]
+[ext_resource type="PackedScene" uid="uid://bqcmvrwev8jwk" path="res://Resources/Models/Trains/track.glb" id="61_6v1r7"]
+[ext_resource type="PackedScene" uid="uid://dqiubju8kkqo3" path="res://Resources/Models/Trains/train-carriage-box.glb" id="62_xv5g3"]
+[ext_resource type="PackedScene" uid="uid://dqumeiy728wvs" path="res://Resources/Models/Trains/train-carriage-coal.glb" id="63_h04g1"]
+[ext_resource type="PackedScene" uid="uid://ddu4qhpt8xcwm" path="res://Resources/Models/Trains/train-carriage-container-blue.glb" id="64_7580w"]
+[ext_resource type="PackedScene" uid="uid://d1uwh2mb74hjo" path="res://Resources/Models/Trains/train-carriage-container-green.glb" id="65_ne68c"]
+[ext_resource type="PackedScene" uid="uid://b1v4ra6nkoyln" path="res://Resources/Models/Trains/train-carriage-container-red.glb" id="66_or46l"]
+[ext_resource type="PackedScene" uid="uid://7nekyldksbd2" path="res://Resources/Models/Trains/train-carriage-dirt.glb" id="67_6ijb4"]
+[ext_resource type="PackedScene" uid="uid://p1og7hjyt735" path="res://Resources/Models/Trains/train-carriage-flatbed-wood.glb" id="68_c1w4e"]
+[ext_resource type="PackedScene" uid="uid://vbjcjpp36pik" path="res://Resources/Models/Trains/train-carriage-flatbed.glb" id="69_plqge"]
+[ext_resource type="PackedScene" uid="uid://cxba1y135fpgw" path="res://Resources/Models/Trains/train-carriage-lumber.glb" id="70_17sgo"]
+[ext_resource type="PackedScene" uid="uid://bjaysip3lvpdj" path="res://Resources/Models/Trains/train-carriage-tank-large.glb" id="71_qakrr"]
+[ext_resource type="PackedScene" uid="uid://cqev2dgysbf18" path="res://Resources/Models/Trains/train-carriage-tank.glb" id="72_32tyk"]
+[ext_resource type="PackedScene" uid="uid://vgnu4s1i1ohf" path="res://Resources/Models/Trains/train-carriage-wood.glb" id="73_uo2wt"]
+[ext_resource type="PackedScene" uid="uid://b6e3oadr8hx56" path="res://Resources/Models/Trains/train-connector.glb" id="74_k43v2"]
+[ext_resource type="PackedScene" uid="uid://d3iox14cfxui8" path="res://Resources/Models/Trains/train-diesel-a.glb" id="75_cpyae"]
+[ext_resource type="PackedScene" uid="uid://dgk0vse6bgk8g" path="res://Resources/Models/Trains/train-diesel-b.glb" id="76_0i6na"]
+[ext_resource type="PackedScene" uid="uid://bo2gwot8lb526" path="res://Resources/Models/Trains/train-diesel-box-a.glb" id="77_rklvb"]
+[ext_resource type="PackedScene" uid="uid://h30bststn7we" path="res://Resources/Models/Trains/train-diesel-box-b.glb" id="78_1r70t"]
+[ext_resource type="PackedScene" uid="uid://bdvsivg2m0bbk" path="res://Resources/Models/Trains/train-diesel-box-c.glb" id="79_if32a"]
+[ext_resource type="PackedScene" uid="uid://bixqfh3s85qdq" path="res://Resources/Models/Trains/train-diesel-c.glb" id="80_63l56"]
+[ext_resource type="PackedScene" uid="uid://beleuul4snem" path="res://Resources/Models/Trains/train-electric-bullet-a.glb" id="81_gwf3o"]
+[ext_resource type="PackedScene" uid="uid://dst0nof43bnmq" path="res://Resources/Models/Trains/train-electric-bullet-b.glb" id="82_beyfn"]
+[ext_resource type="PackedScene" uid="uid://wlcxjgpfys60" path="res://Resources/Models/Trains/train-electric-bullet-c.glb" id="83_vblst"]
+[ext_resource type="PackedScene" uid="uid://8w1oqfh7q3kl" path="res://Resources/Models/Trains/train-electric-city-a.glb" id="84_1l7td"]
+[ext_resource type="PackedScene" uid="uid://ddwnfd7a1smlr" path="res://Resources/Models/Trains/train-electric-city-b.glb" id="85_4aicn"]
+[ext_resource type="PackedScene" uid="uid://vsjkv5ngfa70" path="res://Resources/Models/Trains/train-electric-city-c.glb" id="86_equ6e"]
+[ext_resource type="PackedScene" uid="uid://bs5foreb4ew57" path="res://Resources/Models/Trains/train-electric-double-a.glb" id="87_i7nfs"]
+[ext_resource type="PackedScene" uid="uid://dckvjrao4vi4j" path="res://Resources/Models/Trains/train-electric-double-b.glb" id="88_tnsgl"]
+[ext_resource type="PackedScene" uid="uid://cxf5h6ixwipp4" path="res://Resources/Models/Trains/train-electric-double-c.glb" id="89_qnmx4"]
+[ext_resource type="PackedScene" uid="uid://qatm3mx1vb47" path="res://Resources/Models/Trains/train-electric-square-a.glb" id="90_a7ixv"]
+[ext_resource type="PackedScene" uid="uid://drgatqit1err5" path="res://Resources/Models/Trains/train-electric-square-b.glb" id="91_j3b5a"]
+[ext_resource type="PackedScene" uid="uid://c3sakot7k3ubh" path="res://Resources/Models/Trains/train-electric-square-c.glb" id="92_ssyhl"]
+[ext_resource type="PackedScene" uid="uid://cx1wphaqasx06" path="res://Resources/Models/Trains/train-electric-subway-a.glb" id="93_hgu4u"]
+[ext_resource type="PackedScene" uid="uid://cbxyky65fa1wx" path="res://Resources/Models/Trains/train-electric-subway-b.glb" id="94_bvtra"]
+[ext_resource type="PackedScene" uid="uid://cxbck4iynnt3" path="res://Resources/Models/Trains/train-electric-subway-c.glb" id="95_saiu5"]
+[ext_resource type="PackedScene" uid="uid://5jp02cwgll5d" path="res://Resources/Models/Trains/train-locomotive-a.glb" id="96_mrhbg"]
+[ext_resource type="PackedScene" uid="uid://bws8b4dbw2s4p" path="res://Resources/Models/Trains/train-locomotive-b.glb" id="97_pvg22"]
+[ext_resource type="PackedScene" uid="uid://dx2utt08hkq2n" path="res://Resources/Models/Trains/train-locomotive-c.glb" id="98_bcbsq"]
+[ext_resource type="PackedScene" uid="uid://dqh2ggm5vq2o5" path="res://Resources/Models/Trains/train-locomotive-passenger-a.glb" id="99_wnjum"]
+[ext_resource type="PackedScene" uid="uid://brwlxri2hiy1k" path="res://Resources/Models/Trains/train-locomotive-passenger-b.glb" id="100_nby80"]
+[ext_resource type="PackedScene" uid="uid://u5ro1sirklu8" path="res://Resources/Models/Trains/train-tram-classic.glb" id="101_oci76"]
+[ext_resource type="PackedScene" uid="uid://dccsvphpsi3bp" path="res://Resources/Models/Trains/train-tram-modern.glb" id="102_k0b6c"]
+[ext_resource type="PackedScene" uid="uid://bbhdigcdr1t54" path="res://Resources/Models/Trains/train-tram-round.glb" id="103_s8f45"]
+
+[node name="LibrairyScene" type="Node3D"]
+
+[node name="railroad-corner-large-ramp2" parent="." instance=ExtResource("1_j1mws")]
+
+[node name="railroad-corner-large2" parent="." instance=ExtResource("2_2r5d5")]
+
+[node name="railroad-corner-small-ramp2" parent="." instance=ExtResource("3_f3iog")]
+
+[node name="railroad-corner-small2" parent="." instance=ExtResource("4_i2u23")]
+
+[node name="railroad-curve2" parent="." instance=ExtResource("5_olf72")]
+
+[node name="railroad-damaged-corner-large-ramp2" parent="." instance=ExtResource("6_t6lql")]
+
+[node name="railroad-damaged-corner-large2" parent="." instance=ExtResource("7_m5h4i")]
+
+[node name="railroad-damaged-corner-small-ramp2" parent="." instance=ExtResource("8_elwfb")]
+
+[node name="railroad-damaged-corner-small2" parent="." instance=ExtResource("9_pb0q0")]
+
+[node name="railroad-damaged-curve2" parent="." instance=ExtResource("10_w4pj4")]
+
+[node name="railroad-damaged-straight-bend-large2" parent="." instance=ExtResource("11_r88x6")]
+
+[node name="railroad-damaged-straight-bend2" parent="." instance=ExtResource("12_irkq7")]
+
+[node name="railroad-damaged-straight-bump-down2" parent="." instance=ExtResource("13_2g28h")]
+
+[node name="railroad-damaged-straight-bump-up2" parent="." instance=ExtResource("14_68p57")]
+
+[node name="railroad-damaged-straight-hill-beginning2" parent="." instance=ExtResource("15_wqiq6")]
+
+[node name="railroad-damaged-straight-hill-complete-half2" parent="." instance=ExtResource("16_j4qog")]
+
+[node name="railroad-damaged-straight-hill-complete2" parent="." instance=ExtResource("17_v2q6n")]
+
+[node name="railroad-damaged-straight-hill-end2" parent="." instance=ExtResource("18_5bnyy")]
+
+[node name="railroad-damaged-straight-skew-left-side2" parent="." instance=ExtResource("19_oojqa")]
+
+[node name="railroad-damaged-straight-skew-left2" parent="." instance=ExtResource("20_x1x8e")]
+
+[node name="railroad-damaged-straight-skew-right-side2" parent="." instance=ExtResource("21_563l4")]
+
+[node name="railroad-damaged-straight-skew-right2" parent="." instance=ExtResource("22_fxcf7")]
+
+[node name="railroad-damaged-straight2" parent="." instance=ExtResource("23_stbfc")]
+
+[node name="railroad-rail-corner-large-ramp2" parent="." instance=ExtResource("24_em35f")]
+
+[node name="railroad-rail-corner-large2" parent="." instance=ExtResource("25_r5hpe")]
+
+[node name="railroad-rail-corner-small-ramp2" parent="." instance=ExtResource("26_1p2ar")]
+
+[node name="railroad-rail-corner-small2" parent="." instance=ExtResource("27_qsq7n")]
+
+[node name="railroad-rail-curve2" parent="." instance=ExtResource("28_2uptj")]
+
+[node name="railroad-rail-straight-bend-large2" parent="." instance=ExtResource("29_npho8")]
+
+[node name="railroad-rail-straight-bend2" parent="." instance=ExtResource("30_dwaa5")]
+
+[node name="railroad-rail-straight-bump-down2" parent="." instance=ExtResource("31_fqh8d")]
+
+[node name="railroad-rail-straight-bump-up2" parent="." instance=ExtResource("32_c2hnp")]
+
+[node name="railroad-rail-straight-hill-beginning2" parent="." instance=ExtResource("33_y8pvf")]
+
+[node name="railroad-rail-straight-hill-complete-half2" parent="." instance=ExtResource("34_iopw1")]
+
+[node name="railroad-rail-straight-hill-complete2" parent="." instance=ExtResource("35_fsxf5")]
+
+[node name="railroad-rail-straight-hill-end2" parent="." instance=ExtResource("36_218nw")]
+
+[node name="railroad-rail-straight-skew-left-side2" parent="." instance=ExtResource("37_hqy1m")]
+
+[node name="railroad-rail-straight-skew-left2" parent="." instance=ExtResource("38_eyhp2")]
+
+[node name="railroad-rail-straight-skew-right-side2" parent="." instance=ExtResource("39_yffmm")]
+
+[node name="railroad-rail-straight-skew-right2" parent="." instance=ExtResource("40_34v84")]
+
+[node name="railroad-rail-straight2" parent="." instance=ExtResource("41_rqfh6")]
+
+[node name="railroad-straight-bend-large2" parent="." instance=ExtResource("42_pk1mk")]
+
+[node name="railroad-straight-bend2" parent="." instance=ExtResource("43_u2kux")]
+
+[node name="railroad-straight-bump-down2" parent="." instance=ExtResource("44_xguwt")]
+
+[node name="railroad-straight-bump-up2" parent="." instance=ExtResource("45_4kq2s")]
+
+[node name="railroad-straight-hill-beginning2" parent="." instance=ExtResource("46_f8igi")]
+
+[node name="railroad-straight-hill-complete-half2" parent="." instance=ExtResource("47_lwlsi")]
+
+[node name="railroad-straight-hill-complete2" parent="." instance=ExtResource("48_0c4bb")]
+
+[node name="railroad-straight-hill-end2" parent="." instance=ExtResource("49_s8x5q")]
+
+[node name="railroad-straight-skew-left-side2" parent="." instance=ExtResource("50_lirmi")]
+
+[node name="railroad-straight-skew-left2" parent="." instance=ExtResource("51_5mhhb")]
+
+[node name="railroad-straight-skew-right-side2" parent="." instance=ExtResource("52_u54jl")]
+
+[node name="railroad-straight-skew-right2" parent="." instance=ExtResource("53_7fmg3")]
+
+[node name="railroad-straight2" parent="." instance=ExtResource("54_c2euu")]
+
+[node name="spline-segment2" parent="." instance=ExtResource("55_x1ey3")]
+
+[node name="spline-track-damaged2" parent="." instance=ExtResource("56_is05k")]
+
+[node name="spline-track2" parent="." instance=ExtResource("57_7nvls")]
+
+[node name="track-detailed2" parent="." instance=ExtResource("58_atl0b")]
+
+[node name="track-single-detailed2" parent="." instance=ExtResource("59_jv5b4")]
+
+[node name="track-single2" parent="." instance=ExtResource("60_bnc2d")]
+
+[node name="track2" parent="." instance=ExtResource("61_6v1r7")]
+
+[node name="train-carriage-box2" parent="." instance=ExtResource("62_xv5g3")]
+
+[node name="train-carriage-coal2" parent="." instance=ExtResource("63_h04g1")]
+
+[node name="train-carriage-container-blue2" parent="." instance=ExtResource("64_7580w")]
+
+[node name="train-carriage-container-green2" parent="." instance=ExtResource("65_ne68c")]
+
+[node name="train-carriage-container-red2" parent="." instance=ExtResource("66_or46l")]
+
+[node name="train-carriage-dirt2" parent="." instance=ExtResource("67_6ijb4")]
+
+[node name="train-carriage-flatbed-wood2" parent="." instance=ExtResource("68_c1w4e")]
+
+[node name="train-carriage-flatbed2" parent="." instance=ExtResource("69_plqge")]
+
+[node name="train-carriage-lumber2" parent="." instance=ExtResource("70_17sgo")]
+
+[node name="train-carriage-tank-large2" parent="." instance=ExtResource("71_qakrr")]
+
+[node name="train-carriage-tank2" parent="." instance=ExtResource("72_32tyk")]
+
+[node name="train-carriage-wood2" parent="." instance=ExtResource("73_uo2wt")]
+
+[node name="train-connector2" parent="." instance=ExtResource("74_k43v2")]
+
+[node name="train-diesel-a2" parent="." instance=ExtResource("75_cpyae")]
+
+[node name="train-diesel-b2" parent="." instance=ExtResource("76_0i6na")]
+
+[node name="train-diesel-box-a2" parent="." instance=ExtResource("77_rklvb")]
+
+[node name="train-diesel-box-b2" parent="." instance=ExtResource("78_1r70t")]
+
+[node name="train-diesel-box-c2" parent="." instance=ExtResource("79_if32a")]
+
+[node name="train-diesel-c2" parent="." instance=ExtResource("80_63l56")]
+
+[node name="train-electric-bullet-a2" parent="." instance=ExtResource("81_gwf3o")]
+
+[node name="train-electric-bullet-b2" parent="." instance=ExtResource("82_beyfn")]
+
+[node name="train-electric-bullet-c2" parent="." instance=ExtResource("83_vblst")]
+
+[node name="train-electric-city-a2" parent="." instance=ExtResource("84_1l7td")]
+
+[node name="train-electric-city-b2" parent="." instance=ExtResource("85_4aicn")]
+
+[node name="train-electric-city-c2" parent="." instance=ExtResource("86_equ6e")]
+
+[node name="train-electric-double-a2" parent="." instance=ExtResource("87_i7nfs")]
+
+[node name="train-electric-double-b2" parent="." instance=ExtResource("88_tnsgl")]
+
+[node name="train-electric-double-c2" parent="." instance=ExtResource("89_qnmx4")]
+
+[node name="train-electric-square-a2" parent="." instance=ExtResource("90_a7ixv")]
+
+[node name="train-electric-square-b2" parent="." instance=ExtResource("91_j3b5a")]
+
+[node name="train-electric-square-c2" parent="." instance=ExtResource("92_ssyhl")]
+
+[node name="train-electric-subway-a2" parent="." instance=ExtResource("93_hgu4u")]
+
+[node name="train-electric-subway-b2" parent="." instance=ExtResource("94_bvtra")]
+
+[node name="train-electric-subway-c2" parent="." instance=ExtResource("95_saiu5")]
+
+[node name="train-locomotive-a2" parent="." instance=ExtResource("96_mrhbg")]
+
+[node name="train-locomotive-b2" parent="." instance=ExtResource("97_pvg22")]
+
+[node name="train-locomotive-c2" parent="." instance=ExtResource("98_bcbsq")]
+
+[node name="train-locomotive-passenger-a2" parent="." instance=ExtResource("99_wnjum")]
+
+[node name="train-locomotive-passenger-b2" parent="." instance=ExtResource("100_nby80")]
+
+[node name="train-tram-classic2" parent="." instance=ExtResource("101_oci76")]
+
+[node name="train-tram-modern2" parent="." instance=ExtResource("102_k0b6c")]
+
+[node name="train-tram-round2" parent="." instance=ExtResource("103_s8f45")]

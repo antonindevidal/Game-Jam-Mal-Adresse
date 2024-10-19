@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://d3br8b0vttmt7"]
+[gd_scene load_steps=3 format=3 uid="uid://d3br8b0vttmt7"]
+
+[ext_resource type="MeshLibrary" uid="uid://c7o7y25guipgs" path="res://Resources/MeshLibrairy/TrainsLibrairy.tres" id="1_25kxm"]
+[ext_resource type="MeshLibrary" uid="uid://dh0o5ecwj2vjc" path="res://Resources/MeshLibrairy/WorldLibrairy.tres" id="1_yw2n3"]
 
 [node name="MainMenu" type="Node3D"]
+
+[node name="Train" type="GridMap" parent="."]
+mesh_library = ExtResource("1_25kxm")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(2, 65534, 1441852, 1, 65534, 1441852, 0, 65534, 1441852, 65535, 65534, 1441852, 65534, 65534, 1441852, 65534, 65535, 1441852, 65534, 0, 1441852, 65534, 1, 1441852, 65535, 1, 1441852, 0, 1, 1441852, 1, 1, 1441849)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="World" type="GridMap" parent="."]
+mesh_library = ExtResource("1_yw2n3")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(-65535, 3, 40, -65534, 3, 40, -65534, 2, 40, -65534, 1, 40, -65534, 0, 40, -65534, 65535, 40, -65535, 65535, 40, -65536, 65535, 40, -1, 65535, 40, -1, 0, 40, -2, 0, 40, -2, 1, 40, -2, 2, 40, -2, 3, 40, -1, 5, 40, -65536, 4, 40, -65536, 3, 40, -65535, 2, 40, -65535, 1, 40, -65536, 1, 40, -65536, 0, 40, -1, 1, 40, -65535, 4, 40, -1, 2, 40, -65536, 2, 40, -65535, 0, 40, -2, 65535, 40, -3, 65535, 40, -3, 0, 40, -3, 1, 40, -3, 2, 40, -3, 3, 40, -3, 5, 40, -3, 6, 40, -2, 6, 40, -1, 6, 40, -65536, 5, 40, -65535, 5, 40, -65534, 5, 40, -65533, 5, 40, -65534, 4, 40, -65533, 4, 40, -65533, 3, 40, -65533, 2, 40, -65533, 1, 40, -65533, 0, 40, -65533, 65535, 40, -65533, 65534, 40, -65533, 6, 40, -65534, 6, 40, -65535, 6, 40, -65536, 6, 40, -2, 5, 40, -65536, 65534, 40, -65535, 65534, 40, -65534, 65534, 40, -1, 65534, 40, -2, 65534, 40, -3, 65534, 40, -3, 4, 40, -2, 4, 40, -1, 4, 40, -1, 3, 40)
+}
+metadata/_editor_floor_ = Vector3(0, -1, 0)
