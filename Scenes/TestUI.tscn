@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dfelmccojuxt3"]
 
 [ext_resource type="FontFile" uid="uid://s0uksifgl04s" path="res://Resources/Font/Ingriana Bold Italic.ttf" id="1_2n82p"]
-[ext_resource type="Texture2D" uid="uid://4whhsdmgtngi" path="res://Resources/UI/CGB02-orange_L_btn.png" id="1_t125o"]
-[ext_resource type="Texture2D" uid="uid://ch3aqxg8x6fc8" path="res://Resources/UI/CGB02-orange_S_btn.png" id="3_4a6gg"]
-[ext_resource type="Texture2D" uid="uid://dpkn2gxsg36xf" path="res://Resources/UI/CGB02-green_S_btn.png" id="3_oskqf"]
+[ext_resource type="Texture2D" uid="uid://cgwigkhhavhlx" path="res://Resources/UI/CGB02-orange_L_btn.png" id="1_t125o"]
+[ext_resource type="Texture2D" uid="uid://l2r06ldseqdo" path="res://Resources/UI/CGB02-orange_S_btn.png" id="3_4a6gg"]
+[ext_resource type="Texture2D" uid="uid://dbe7qs1e4e82l" path="res://Resources/UI/CGB02-green_S_btn.png" id="3_oskqf"]
 
 [sub_resource type="Theme" id="Theme_rlq1v"]
 
