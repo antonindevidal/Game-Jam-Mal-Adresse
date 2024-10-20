@@ -40,7 +40,7 @@ func _ready():
 	railGrid.set_cell_item(endPos[0],0,16)
 	var t = trains[0]
 	t.position = railGrid.map_to_local(startPos[0])
-
+	
 func _process(delta):
 	if is_playing :
 		var trainPos = trains[0].position
@@ -56,8 +56,9 @@ func _process(delta):
 			nextDestPos = newDest
 			currentTravelTime = 0.0
 			progress = 0
-			
-		trains[0].position = lastStartPos + progress * (nextDestPos - lastStartPos)
+		
+		var newPos = lastStartPos + progress * (nextDestPos - lastStartPos)
+		trains[0].position = newPos
 		
 	elif selected_item != null:
 		selected_item.position = get_cell_under_mouse(worldGrid)
@@ -224,7 +225,7 @@ func check_cross_3L(cell, avoid) -> Vector3i:
 		i+=1
 	axis = axis / 2
 	if !(dir.x == axis.x && dir.z == axis.z) :
-		nextCell = ns[i]
+		nextCell = ns[i%3]
 	elif(cross3Dir[cell]) :
 		nextCell = ns[(i+1)%3]
 		cross3Dir[cell] = !cross3Dir[cell]
