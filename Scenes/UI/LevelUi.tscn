@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cg1pgl7dxjhfj"]
+[gd_scene load_steps=9 format=3 uid="uid://cg1pgl7dxjhfj"]
 
 [ext_resource type="Script" path="res://Scripts/LevelUi.gd" id="1_o5y1v"]
 [ext_resource type="Texture2D" uid="uid://c7j8562i2squu" path="res://Resources/Icons/Rail.png" id="2_4guen"]
 [ext_resource type="PackedScene" uid="uid://bctsftvg5wpiq" path="res://Resources/Models/Rail/track-detailed.glb" id="2_wda42"]
-[ext_resource type="Texture2D" uid="uid://yniwf1cpohru" path="res://Resources/UI/Rectangle-Border.png" id="3_5oqu6"]
+[ext_resource type="Texture2D" uid="uid://l2r06ldseqdo" path="res://Resources/UI/CGB02-orange_S_btn.png" id="3_0y0ol"]
+[ext_resource type="Texture2D" uid="uid://vs2q4nwlchyy" path="res://Resources/UI/CGB02-yellow_S_btn.png" id="4_8m00j"]
 [ext_resource type="Texture2D" uid="uid://behbs0eihu0yi" path="res://Resources/Icons/Wrench.png" id="5_gl6k3"]
 [ext_resource type="Texture2D" uid="uid://b71b53dpq3yiu" path="res://Resources/Icons/Recycle.png" id="6_uaueb"]
 [ext_resource type="Texture2D" uid="uid://dv337bccpsgsb" path="res://Resources/Icons/Play.png" id="7_73w28"]
@@ -21,28 +22,43 @@ items = Array[PackedScene]([ExtResource("2_wda42")])
 ItemBar = NodePath("ItemBar")
 
 [node name="ItemBar" type="HBoxContainer" parent="."]
+clip_contents = true
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.472
-anchor_top = 0.901
-anchor_right = 0.528
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 12.256
-offset_top = 24.152
-offset_right = -12.256
+offset_left = -222.0
+offset_top = -140.0
+offset_right = 222.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.69, 0.69)
+pivot_offset = Vector2(221.115, 0)
+theme_override_constants/separation = 30
+alignment = 1
 
 [node name="Rail" type="TextureButton" parent="ItemBar"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture_hover = ExtResource("3_5oqu6")
+size_flags_vertical = 4
+texture_normal = ExtResource("3_0y0ol")
+texture_hover = ExtResource("4_8m00j")
+stretch_mode = 0
 
 [node name="Icon" type="TextureRect" parent="ItemBar/Rail"]
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 35.0
+offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_4guen")
@@ -50,11 +66,13 @@ texture = ExtResource("2_4guen")
 [node name="Tool" type="TextureButton" parent="ItemBar"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture_hover = ExtResource("3_5oqu6")
+texture_normal = ExtResource("3_0y0ol")
+texture_hover = ExtResource("4_8m00j")
+stretch_mode = 3
 
 [node name="Icon" type="TextureRect" parent="ItemBar/Tool"]
 clip_contents = true
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -73,11 +91,13 @@ expand_mode = 1
 [node name="Recycle" type="TextureButton" parent="ItemBar"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture_hover = ExtResource("3_5oqu6")
+texture_normal = ExtResource("3_0y0ol")
+texture_hover = ExtResource("4_8m00j")
+stretch_mode = 3
 
 [node name="Icon" type="TextureRect" parent="ItemBar/Recycle"]
 clip_contents = true
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
