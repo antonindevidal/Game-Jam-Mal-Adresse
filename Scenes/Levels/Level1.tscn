@@ -39,9 +39,6 @@ transform = Transform3D(1, 0, 0, 0, 0.827571, 0.561361, 0, -0.561361, 0.827571, 
 [node name="train-diesel-a2" parent="." instance=ExtResource("5_q387l")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0.75, 1.94685, 2.99707)
 
-[node name="Train" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.94685, 2.99707)
-
 [connection signal="play" from="CanvasLayer/LevelUi" to="." method="_on_play"]
 [connection signal="select_item" from="CanvasLayer/LevelUi" to="." method="on_item_selected"]
 [connection signal="select_recycle" from="CanvasLayer/LevelUi" to="." method="on_recycle_selected"]
