@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdnevjay0kqu4"
+<<<<<<< HEAD
+uid="uid://b15gemt6pi5ik"
+=======
+uid="uid://n3j7ae8tl06p"
+>>>>>>> 77adb5a8a467b0411cad35804f3fec59368c0330
 path="res://.godot/imported/CGB02-red_L_btn.png-786190baf70251d5ba1cdfdfea0d79b8.ctex"
 metadata={
 "vram_texture": false
