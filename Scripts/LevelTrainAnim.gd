@@ -4,7 +4,9 @@ class_name LevelTrainAnim
 signal train_stuck_on_rail()
 
 @export var speed : float = 1.0
+@export var rotationSpeed : float = 1.0
 @export var level : Level
+
 var startPos : Vector3
 var destPos : Vector3
 var canContinue : bool = false
@@ -51,6 +53,7 @@ func _add_new_dest(newDest : Vector3) -> void :
 		emit_signal("train_stuck_on_rail")
 		return
 	
+	look_at(newDest)
 	startPos = destPos
 	destPos = newDest
 	currentTravelTime = 0.0
@@ -58,10 +61,9 @@ func _add_new_dest(newDest : Vector3) -> void :
 	canContinue = true
 	progress = 0.0
 	pass
-	
 
 func _stop_train():
 	canContinue = false
-
+	
 func norm2(vector: Vector3) -> float:
 	return sqrt((vector.x*vector.x)+(vector.y*vector.y)+(vector.z*vector.z))
