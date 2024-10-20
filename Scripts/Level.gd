@@ -10,7 +10,7 @@ var selected_item : Node3D = null
 @onready var worldGrid : GridMap = $World
 @onready var railGrid : GridMap = $RailGrid
 
-@export var trains : Array[Node3D] = []
+@export var trains : Array[LevelTrainAnim] = []
 @export var startPos : Array[Vector3i]
 @export var endPos : Array[Vector3i]
 
@@ -36,34 +36,46 @@ var neighboors : Array[Vector3i] = [
 ]
 
 func _ready():
-	railGrid.set_cell_item(startPos[0],0,16)
-	railGrid.set_cell_item(endPos[0],0,16)
-	var t = trains[0]
-	t.position = railGrid.map_to_local(startPos[0])
+	for pos in startPos:
+		railGrid.set_cell_item(pos,0,16)
+	for pos in endPos:
+		railGrid.set_cell_item(pos,0,16)
+	
+	var i = 0
+	for train in trains:
+		train._set_start_dest(railGrid.map_to_local(startPos[i]))
+		i +=1
 	
 func _process(delta):
 	if is_playing :
-		var trainPos = trains[0].position
+		var i = 0
+		for train in trains:
+			if(train.progress == 1):
+				var newDest = get_next_cell(train.destPos, train.startPos)
+				train._add_new_dest(newDest)
+			i+=1
 		
-		currentTravelTime += delta;
-		var progress = currentTravelTime / totalTravelTime
+		var j = 0
+		var allTrainAtEnd = true
+		for train in trains:
+			if(train.position != railGrid.map_to_local(endPos[j])):
+				allTrainAtEnd = false
+			j+=1
 		
-		if(progress >= 1):
-			if(railGrid.local_to_map(trainPos) == endPos[0]):
-				is_playing = false
-			var newDest = get_next_cell(nextDestPos, lastStartPos)
-			lastStartPos = nextDestPos
-			nextDestPos = newDest
-			currentTravelTime = 0.0
-			progress = 0
-		
-		var newPos = lastStartPos + progress * (nextDestPos - lastStartPos)
-		trains[0].position = newPos
+		if(allTrainAtEnd):
+			is_playing = false
+			print("fin du niveau")
+			#changement de scène
 		
 	elif selected_item != null:
 		selected_item.position = get_cell_under_mouse(worldGrid)
 		selected_item.position += offSet
-		
+
+func _on__train_stuck_on_rail() -> void:
+	print("train stuck on a rail")
+	#end level here
+	pass # Replace with function body.
+
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton && !is_playing:
@@ -175,9 +187,11 @@ func UpdateNeighboors(cell_pos : Vector3i):
 
 
 func _on_play():
-	lastStartPos = railGrid.map_to_local(startPos[0])
-	nextDestPos = get_next_cell(lastStartPos, lastStartPos)
-	currentTravelTime = 0.0
+	var i = 0
+	for train in trains:
+		train._set_start_dest(railGrid.map_to_local(startPos[i]))
+		train._add_new_dest(get_next_cell(train.startPos, train.startPos))
+		i+=1
 	is_playing = true
 
 func norm2(vector: Vector3) -> float:
@@ -185,7 +199,7 @@ func norm2(vector: Vector3) -> float:
 
 func get_next_cell(oldCell : Vector3, lastStart : Vector3) -> Vector3:
 	var cell : Vector3i = railGrid.local_to_map(oldCell)
-	var nextCell : Vector3i = Vector3.ZERO
+	var nextCell : Vector3i = railGrid.local_to_map(oldCell)
 	var avoid : Array[Vector3i] = [railGrid.local_to_map(lastStart)]
 	
 	var cell_type : int = railGrid.get_cell_item(cell)

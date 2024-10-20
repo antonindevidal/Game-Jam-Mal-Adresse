@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 		currentTravelTime += delta;
 		var progress = currentTravelTime / totalTravelTime
 		position = start+ sin((progress * PI) / 2) * (destination - start)
-		
+
 		if(progress > 1):
 			destination = null
 
