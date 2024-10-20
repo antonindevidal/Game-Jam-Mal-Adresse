@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/MainMenu/MainMenuManager.gd" id="1_urtks"]
 [ext_resource type="MeshLibrary" uid="uid://ck3v7xuqsvirw" path="res://Resources/MeshLibrairy/WorldLibFBX.tres" id="2_1st3d"]
-[ext_resource type="MeshLibrary" uid="uid://g6sdytyf1xvj" path="res://Resources/MeshLibrairy/RailsLibrary.tres" id="3_0xfto"]
+[ext_resource type="MeshLibrary" uid="uid://623iy0jhaxc1" path="res://Resources/MeshLibrairy/RailsLibrary.tres" id="3_0xfto"]
 [ext_resource type="PackedScene" uid="uid://cyhls8uowy3xt" path="res://Resources/Models/Trains/train-diesel-a.glb" id="3_d4ep7"]
 [ext_resource type="Script" path="res://Scripts/MainMenu/TrainFollowing.gd" id="4_b3vp7"]
 [ext_resource type="PackedScene" uid="uid://c0r8iid3tetco" path="res://Resources/Models/Buildings/FBX/low_buildingA.fbx" id="4_ydmoe"]
