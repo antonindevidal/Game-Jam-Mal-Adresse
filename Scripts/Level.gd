@@ -7,7 +7,7 @@ var selected_item : Node3D = null
 @onready var recycleIcon = load("res://Resources/Icons/Recycle.png")
 
 @onready var camera : Camera3D = $Camera3D
-@onready var worldGrid : GridMap = $World
+@onready var worldGrid : GridMap = $Map/World
 @onready var railGrid : GridMap = $RailGrid
 
 @export var trains : Array[LevelTrainAnim] = []
@@ -93,6 +93,7 @@ func _unhandled_input(event):
 				if(cell == 3) : railGrid.set_cell_item(cell_pos, 2,cell_rot)
 				if(cell == 2) : railGrid.set_cell_item(cell_pos, 3,cell_rot)
 			else:
+				if(selected_item.position.x < 0 || selected_item.position.z < 0): return
 				var cell : Vector3i = railGrid.local_to_map(selected_item.position)
 				var c = get_rail_model_index(cell)
 				if !startPos.has(cell) && !endPos.has(cell):
@@ -100,7 +101,6 @@ func _unhandled_input(event):
 					if(c[0] == 2 || c[0] == 3):
 						cross3Dir[cell] = false
 					UpdateNeighboors(cell)
-			
 
 func reset_select_bool():
 	is_wrench = false
