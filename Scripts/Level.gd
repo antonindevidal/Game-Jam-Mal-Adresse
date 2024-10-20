@@ -3,6 +3,9 @@ class_name Level
 
 var selected_item : Node3D = null
 
+@onready var wrenchIcon = load("res://Resources/Icons/Wrench.png")
+@onready var recycleIcon = load("res://Resources/Icons/Recycle.png")
+
 @onready var camera : Camera3D = $Camera3D
 @onready var worldGrid : GridMap = $World
 @onready var railGrid : GridMap = $RailGrid
@@ -19,6 +22,9 @@ var currentTravelTime : float
 var totalTravelTime = 0.2
 
 var offSet : Vector3 = Vector3(0.5,0,0.5)
+
+var is_wrench = false
+var is_recycle = false
 
 var neighboors : Array[Vector3i] = [
 	Vector3i(0,0,-1),
@@ -50,27 +56,61 @@ func _process(delta):
 			progress = 0
 			
 		trains[0].position = lastStartPos + progress * (nextDestPos - lastStartPos)
-
+		
 	elif selected_item != null:
-		selected_item.position = get_cell_under_mouse()
+		selected_item.position = get_cell_under_mouse(worldGrid)
 		selected_item.position += offSet
 		
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			var cell : Vector3i = railGrid.local_to_map(selected_item.position)
-			var c = get_rail_model_index(cell)
-			railGrid.set_cell_item(cell, c[0], c[1])
-			UpdateNeighboors(cell)
+			if is_recycle:
+				var cell_pos = get_cell_under_mouse(railGrid)
+				var cell_rot = railGrid.get_cell_item_orientation(cell_pos)
+				var cell = railGrid.get_cell_item(get_cell_under_mouse(railGrid))
+				if cell >=0 && !startPos.has(cell_pos) && !endPos.has(cell_pos):
+					railGrid.set_cell_item(cell_pos, -1)
+					UpdateNeighboors(cell_pos)
+			elif is_wrench:
+				var cell_pos = get_cell_under_mouse(railGrid)
+				var cell_rot = railGrid.get_cell_item_orientation(cell_pos)
+				var cell = railGrid.get_cell_item(get_cell_under_mouse(railGrid))
+				if(cell == 3) : railGrid.set_cell_item(cell_pos, 2,cell_rot)
+				if(cell == 2) : railGrid.set_cell_item(cell_pos, 3,cell_rot)
+			else:
+				var cell : Vector3i = railGrid.local_to_map(selected_item.position)
+				var c = get_rail_model_index(cell)
+				if !startPos.has(cell) && !endPos.has(cell):
+					railGrid.set_cell_item(cell, c[0], c[1])
+					UpdateNeighboors(cell)
 			
 
+func reset_select_bool():
+	is_wrench = false
+	is_recycle = false
+
 func on_item_selected(item : PackedScene):
+	Input.set_custom_mouse_cursor(null)
+	if selected_item != null : selected_item.queue_free()
+	reset_select_bool()
 	selected_item = item.instantiate()
+	selected_item.rotate_y(deg_to_rad(-90))
 	add_child(selected_item)
 
+func on_wrench_selected():
+	reset_select_bool()
+	is_wrench = true
+	if selected_item != null : selected_item.queue_free()
+	Input.set_custom_mouse_cursor(wrenchIcon)
 
-func get_cell_under_mouse() -> Vector3i:
+func on_recycle_selected():
+	reset_select_bool()
+	is_recycle = true
+	if selected_item != null : selected_item.queue_free()
+	Input.set_custom_mouse_cursor(recycleIcon)
+
+func get_cell_under_mouse(grid : GridMap) -> Vector3i:
 	var mouse_pos = get_viewport().get_mouse_position()
 	var ray_from = camera.project_ray_origin(mouse_pos)
 	var ray_to = ray_from + camera.project_ray_normal(mouse_pos) * 50
@@ -78,7 +118,7 @@ func get_cell_under_mouse() -> Vector3i:
 	var ray = PhysicsRayQueryParameters3D.create(ray_from, ray_to)
 	var selection : Dictionary = space_state.intersect_ray(ray)
 	if(selection.keys().size() > 0):
-		return worldGrid.local_to_map(selection["position"] + Vector3.UP)
+		return grid.local_to_map(selection["position"] + Vector3.UP)
 	else:
 		return Vector3i.ZERO
 
@@ -108,7 +148,7 @@ func get_rail_model_index(cell_pos : Vector3i) -> Array[int]:
 	elif n == 15: c = 4
 	
 	#rotation de la cellule
-	var r90 = [2,3,8,10,11]
+	var r90 = [0,2,3,8,10,11]
 	var r180 = [9,13]
 	var r270 = [12,14]
 	if r90.has(n) : r = 16
@@ -118,7 +158,6 @@ func get_rail_model_index(cell_pos : Vector3i) -> Array[int]:
 	return [c,r]
 
 func UpdateNeighboors(cell_pos : Vector3i):
-	
 	var c = []
 	var p : Vector3i = cell_pos+Vector3i(0,0,-1)
 	var cell = railGrid.get_cell_item(p)
