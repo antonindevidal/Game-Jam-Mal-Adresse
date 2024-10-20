@@ -51,8 +51,11 @@ func _process(delta):
 		var i = 0
 		for train in trains:
 			if(train.progress == 1):
-				var newDest = get_next_cell(train.destPos, train.startPos)
-				train._add_new_dest(newDest)
+				if(train.startPos ==  railGrid.map_to_local(endPos[i])):
+					train._stop_train()
+				else:
+					var newDest = get_next_cell(train.destPos, train.startPos)
+					train._add_new_dest(newDest)
 			i+=1
 		
 		var j = 0
@@ -71,7 +74,7 @@ func _process(delta):
 		selected_item.position = get_cell_under_mouse(worldGrid)
 		selected_item.position += offSet
 
-func _on__train_stuck_on_rail() -> void:
+func _on_train_stuck_on_rail() -> void:
 	print("train stuck on a rail")
 	#end level here
 	pass # Replace with function body.

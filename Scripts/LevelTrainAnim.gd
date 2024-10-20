@@ -59,5 +59,9 @@ func _add_new_dest(newDest : Vector3) -> void :
 	progress = 0.0
 	pass
 	
+
+func _stop_train():
+	canContinue = false
+
 func norm2(vector: Vector3) -> float:
 	return sqrt((vector.x*vector.x)+(vector.y*vector.y)+(vector.z*vector.z))
