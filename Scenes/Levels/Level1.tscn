@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dj6eesxqpad45"]
+[gd_scene load_steps=17 format=3 uid="uid://dj6eesxqpad45"]
 
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_nr7ws"]
 [ext_resource type="PackedScene" uid="uid://cg1pgl7dxjhfj" path="res://Scenes/UI/LevelUi.tscn" id="1_w7qxa"]
@@ -6,6 +6,8 @@
 [ext_resource type="MeshLibrary" uid="uid://dw50cqcq7qsnb" path="res://Resources/MeshLibrairy/RailsLibrary.tres" id="4_hyclq"]
 [ext_resource type="PackedScene" uid="uid://c10sk0nl5hx0y" path="res://Resources/Models/World/FBX/Models/FBX format/tree_pineRoundA.fbx" id="4_qjt67"]
 [ext_resource type="PackedScene" uid="uid://cyhls8uowy3xt" path="res://Resources/Models/Trains/train-diesel-a.glb" id="5_q387l"]
+[ext_resource type="Texture2D" uid="uid://dbe7qs1e4e82l" path="res://Resources/UI/CGB02-green_S_btn.png" id="5_ua15c"]
+[ext_resource type="Texture2D" uid="uid://dtk687xnxl84i" path="res://Resources/UI/CGB02-red_S_btn.png" id="6_d22we"]
 [ext_resource type="Script" path="res://Scripts/LevelTrainAnim.gd" id="7_ep0hu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e7uc6"]
@@ -22,6 +24,22 @@ ambient_light_energy = 0.24
 tonemap_mode = 2
 tonemap_exposure = 0.62
 tonemap_white = 0.63
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsi74"]
+render_priority = 1
+transparency = 1
+albedo_texture = ExtResource("5_ua15c")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_f8d37"]
+material = SubResource("StandardMaterial3D_gsi74")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v73lr"]
+transparency = 1
+albedo_texture = ExtResource("6_d22we")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ykbu4"]
 
 [node name="Level1" type="Node3D" node_paths=PackedStringArray("trains")]
 script = ExtResource("1_nr7ws")
@@ -116,6 +134,24 @@ data = {
 "cells": PackedInt32Array(65536, 9, 1048652, 65536, 10, 1048652, 65536, 11, 1048652, 65536, 7, 1048652, 65536, 6, 1048652, 65536, 4, 1048652, 65536, 3, 1048652, 65536, 1, 1048652, 65536, 65535, 1048650, 65537, 65534, 1048650, 65539, 65533, 1048650, 65541, 65532, 1048650, 65545, 65532, 74, 65546, 65533, 74, 65547, 65534, 74, 65548, 5, 74, 65536, 0, 1048652, 65538, 65534, 76, 65542, 65532, 76, 65543, 65532, 76, 65544, 65531, 76, 65544, 65532, 76, 65547, 0, 1441868, 65547, 1, 1441868, 65547, 2, 1441868, 65547, 65535, 1441868, 65547, 4, 1441868, 65547, 3, 1441868, 65549, 6, 76, 65550, 6, 76, 65554, 6, 76, 65553, 6, 76, 65552, 6, 76, 65551, 6, 76, 65536, 5, 1048618, 65536, 8, 1048618, 65536, 2, 1048618)
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0.949173, -0.314755, 0, 0.314755, 0.949173, 11.0294, 1.74839, 1.66933)
+mesh = SubResource("QuadMesh_f8d37")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0.949173, -0.314755, 0, 0.314755, 0.949173, 1.51093, 1.74839, 1.66933)
+mesh = SubResource("QuadMesh_f8d37")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.75, 4.348)
+material_override = SubResource("StandardMaterial3D_v73lr")
+mesh = SubResource("QuadMesh_ykbu4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0012, 1.75, 4.348)
+material_override = SubResource("StandardMaterial3D_v73lr")
+mesh = SubResource("QuadMesh_ykbu4")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.551937, 0.833885, 0, -0.833885, 0.551937, 6, 8, 8.125)

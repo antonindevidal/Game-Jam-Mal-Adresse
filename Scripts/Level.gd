@@ -55,7 +55,7 @@ func _process(delta):
 		var i = 0
 		for train in trains:
 			if(train.progress == 1):
-				if(train.startPos ==  railGrid.map_to_local(endPos[i])):
+				if(train.position ==  railGrid.map_to_local(endPos[i])):
 					train._stop_train()
 				else:
 					var newDest = get_next_cell(train.destPos, train.startPos)
@@ -96,7 +96,7 @@ func _unhandled_input(event):
 				var cell = railGrid.get_cell_item(get_cell_under_mouse(railGrid))
 				if(cell == 3) : railGrid.set_cell_item(cell_pos, 2,cell_rot)
 				if(cell == 2) : railGrid.set_cell_item(cell_pos, 3,cell_rot)
-			else:
+			elif selected_item != null:
 				if(selected_item.position.x < 0 || selected_item.position.z < 0): return
 				var cell : Vector3i = railGrid.local_to_map(selected_item.position)
 				var c = get_rail_model_index(cell)
@@ -278,7 +278,7 @@ func check_cross_3R(cell, avoid) -> Vector3i:
 		nextCell = ns[(i+1)%3]
 		cross3Dir[cell] = !cross3Dir[cell]
 	else :
-		nextCell = ns[i]
+		nextCell = ns[i%3]
 		cross3Dir[cell] = !cross3Dir[cell]
 	
 	return nextCell

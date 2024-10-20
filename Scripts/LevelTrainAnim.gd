@@ -50,6 +50,7 @@ func _add_new_dest(newDest : Vector3) -> void :
 		print("START DEST NOT SET FOR TRAIN")
 	if(newDest == destPos):
 		canContinue = false
+		print("train stuck on rail")
 		emit_signal("train_stuck_on_rail")
 		return
 	
