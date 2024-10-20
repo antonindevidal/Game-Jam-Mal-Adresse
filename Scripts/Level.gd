@@ -3,6 +3,10 @@ class_name Level
 
 var selected_item : Node3D = null
 
+@export var level : int
+
+@onready var menu : PackedScene = load("res://Scenes/MainMenu.tscn")
+
 @onready var wrenchIcon = load("res://Resources/Icons/Wrench.png")
 @onready var recycleIcon = load("res://Resources/Icons/Recycle.png")
 
@@ -67,17 +71,14 @@ func _process(delta):
 		
 		if(allTrainAtEnd):
 			is_playing = false
-			print("fin du niveau")
-			#changement de scène
+			get_tree().change_scene_to_packed(menu)
 		
 	elif selected_item != null:
 		selected_item.position = get_cell_under_mouse(worldGrid)
 		selected_item.position += offSet
 
 func _on_train_stuck_on_rail() -> void:
-	print("train stuck on a rail")
-	#end level here
-	pass # Replace with function body.
+	get_tree().reload_current_scene()
 
 
 func _unhandled_input(event):

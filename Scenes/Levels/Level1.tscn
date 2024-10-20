@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dj6eesxqpad45"]
+[gd_scene load_steps=8 format=3 uid="uid://dj6eesxqpad45"]
 
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_nr7ws"]
 [ext_resource type="PackedScene" uid="uid://cg1pgl7dxjhfj" path="res://Scenes/UI/LevelUi.tscn" id="1_w7qxa"]
@@ -6,10 +6,12 @@
 [ext_resource type="MeshLibrary" uid="uid://dw50cqcq7qsnb" path="res://Resources/MeshLibrairy/RailsLibrary.tres" id="4_hyclq"]
 [ext_resource type="PackedScene" uid="uid://c10sk0nl5hx0y" path="res://Resources/Models/World/FBX/Models/FBX format/tree_pineRoundA.fbx" id="4_qjt67"]
 [ext_resource type="PackedScene" uid="uid://cyhls8uowy3xt" path="res://Resources/Models/Trains/train-diesel-a.glb" id="5_q387l"]
+[ext_resource type="Script" path="res://Scripts/LevelTrainAnim.gd" id="7_ep0hu"]
 
 [node name="Level1" type="Node3D" node_paths=PackedStringArray("trains")]
 script = ExtResource("1_nr7ws")
-trains = [NodePath("train-diesel-a2"), NodePath("train-diesel-a3")]
+level = 1
+trains = [NodePath("Train1"), NodePath("Train2")]
 startPos = Array[Vector3i]([Vector3i(0, 1, 2), Vector3i(0, 1, 5)])
 endPos = Array[Vector3i]([Vector3i(11, 1, 2), Vector3i(11, 1, 5)])
 
@@ -100,13 +102,21 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.827571, 0.561361, 0, -0.561361, 0.827571, 0, 3.57485, 0)
 
-[node name="train-diesel-a2" parent="." instance=ExtResource("5_q387l")]
-transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0.75, 1.94685, 2.99707)
+[node name="Train1" parent="." node_paths=PackedStringArray("level") instance=ExtResource("5_q387l")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -9.62857, 1.94685, 2.99707)
+script = ExtResource("7_ep0hu")
+speed = 4.0
+level = NodePath("..")
 
-[node name="train-diesel-a3" parent="." instance=ExtResource("5_q387l")]
-transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0.75, 1.94685, 2.99707)
+[node name="Train2" parent="." node_paths=PackedStringArray("level") instance=ExtResource("5_q387l")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, -11.3473, 1.94685, 2.99707)
+script = ExtResource("7_ep0hu")
+speed = 4.0
+level = NodePath("..")
 
 [connection signal="play" from="CanvasLayer/LevelUi" to="." method="_on_play"]
 [connection signal="select_item" from="CanvasLayer/LevelUi" to="." method="on_item_selected"]
 [connection signal="select_recycle" from="CanvasLayer/LevelUi" to="." method="on_recycle_selected"]
 [connection signal="select_wrench" from="CanvasLayer/LevelUi" to="." method="on_wrench_selected"]
+[connection signal="train_stuck_on_rail" from="Train1" to="." method="_on_train_stuck_on_rail"]
+[connection signal="train_stuck_on_rail" from="Train2" to="." method="_on_train_stuck_on_rail"]
