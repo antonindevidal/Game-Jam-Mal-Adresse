@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr1eyeq1x66k5"]
+
+[ext_resource type="Script" path="res://Scripts/Train.gd" id="1_n75mu"]
+[ext_resource type="PackedScene" uid="uid://cyhls8uowy3xt" path="res://Resources/Models/Trains/train-diesel-a.glb" id="2_ryo8t"]
+[ext_resource type="PackedScene" uid="uid://b1chw3u8cd26w" path="res://Resources/Models/Trains/train-carriage-box.glb" id="3_iswu3"]
+
+[node name="Train" type="Node3D"]
+script = ExtResource("1_n75mu")
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="train-diesel-a2" parent="Pivot" instance=ExtResource("2_ryo8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="Pivot2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.5)
+
+[node name="train-carriage-box2" parent="Pivot2" instance=ExtResource("3_iswu3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)

@@ -6,7 +6,7 @@
 	set(value): exec()
 
 func exec():
-	var img : Image = mesh_lib.get_item_preview(0).get_image()
+	var img : Image = mesh_lib.get_item_preview(2).get_image()
 	img.save_png("./Test.png")
 	print("Image save")
 	pass
