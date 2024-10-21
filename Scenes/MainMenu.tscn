@@ -440,6 +440,7 @@ shape = SubResource("BoxShape3D_4wgvk")
 [node name="Label3D" type="Label3D" parent="Levels/Level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -3)
 billboard = 1
+shaded = true
 outline_modulate = Color(0, 0, 0, 0.784314)
 text = "1"
 font = ExtResource("7_o2k2t")
@@ -458,6 +459,7 @@ shape = SubResource("BoxShape3D_4wgvk")
 [node name="Label3D" type="Label3D" parent="Levels/Level2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -3)
 billboard = 1
+shaded = true
 outline_modulate = Color(0, 0, 0, 0.784314)
 text = "2
 "
@@ -477,6 +479,8 @@ shape = SubResource("BoxShape3D_4wgvk")
 [node name="Label3D" type="Label3D" parent="Levels/Level3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -3)
 billboard = 1
+shaded = true
+double_sided = false
 outline_modulate = Color(0, 0, 0, 0.784314)
 text = "3
 "
