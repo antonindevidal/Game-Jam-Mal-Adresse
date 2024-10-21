@@ -1,29 +1,30 @@
 [gd_scene load_steps=4 format=3 uid="uid://cetnm21xuq0vj"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e7uc6"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mmj6r"]
+sky_top_color = Color(0.963186, 0.856529, 0.483254, 1)
+sky_energy_multiplier = 3.19
+ground_bottom_color = Color(0.762562, 0.798225, 0.944713, 1)
 
-[sub_resource type="Sky" id="Sky_2ks7p"]
-sky_material = SubResource("ProceduralSkyMaterial_e7uc6")
+[sub_resource type="Sky" id="Sky_ew53y"]
+sky_material = SubResource("ProceduralSkyMaterial_mmj6r")
 
-[sub_resource type="Environment" id="Environment_msfp5"]
+[sub_resource type="Environment" id="Environment_nme5e"]
 background_mode = 2
-sky = SubResource("Sky_2ks7p")
-ambient_light_source = 2
-ambient_light_color = Color(0.994388, 0.986269, 0.969013, 1)
-ambient_light_energy = 0.24
+background_energy_multiplier = 0.5
+sky = SubResource("Sky_ew53y")
+reflected_light_source = 1
 tonemap_mode = 2
-tonemap_exposure = 0.62
-tonemap_white = 0.63
+tonemap_exposure = 0.5
+tonemap_white = 3.7
 
 [node name="Env" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.695743, -0.399572, 0.596895, -0.207606, 0.683665, 0.699644, -0.687635, -0.610691, 0.392702, 0, 2.18533, 0)
-visible = false
 light_color = Color(0.910956, 0.777794, 0.59601, 1)
 light_energy = 0.837
 shadow_enabled = true
 shadow_opacity = 0.6
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_msfp5")
+environment = SubResource("Environment_nme5e")
