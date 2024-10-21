@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://dj6eesxqpad45"]
+[gd_scene load_steps=15 format=3 uid="uid://dj6eesxqpad45"]
 
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_nr7ws"]
 [ext_resource type="PackedScene" uid="uid://cg1pgl7dxjhfj" path="res://Scenes/UI/LevelUi.tscn" id="1_w7qxa"]
+[ext_resource type="PackedScene" uid="uid://cetnm21xuq0vj" path="res://Scenes/LightEnv.tscn" id="2_f4jk3"]
 [ext_resource type="MeshLibrary" uid="uid://od6cw00bie42" path="res://Resources/MeshLibrairy/WorldLibFBX.tres" id="3_juts6"]
 [ext_resource type="MeshLibrary" uid="uid://dw50cqcq7qsnb" path="res://Resources/MeshLibrairy/RailsLibrary.tres" id="4_hyclq"]
 [ext_resource type="PackedScene" uid="uid://c10sk0nl5hx0y" path="res://Resources/Models/World/FBX/Models/FBX format/tree_pineRoundA.fbx" id="4_qjt67"]
@@ -9,21 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dbe7qs1e4e82l" path="res://Resources/UI/CGB02-green_S_btn.png" id="5_ua15c"]
 [ext_resource type="Texture2D" uid="uid://dtk687xnxl84i" path="res://Resources/UI/CGB02-red_S_btn.png" id="6_d22we"]
 [ext_resource type="Script" path="res://Scripts/LevelTrainAnim.gd" id="7_ep0hu"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e7uc6"]
-
-[sub_resource type="Sky" id="Sky_2ks7p"]
-sky_material = SubResource("ProceduralSkyMaterial_e7uc6")
-
-[sub_resource type="Environment" id="Environment_msfp5"]
-background_mode = 2
-sky = SubResource("Sky_2ks7p")
-ambient_light_source = 2
-ambient_light_color = Color(0.994388, 0.986269, 0.969013, 1)
-ambient_light_energy = 0.24
-tonemap_mode = 2
-tonemap_exposure = 0.62
-tonemap_white = 0.63
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsi74"]
 render_priority = 1
@@ -48,17 +34,7 @@ trains = [NodePath("Train1"), NodePath("Train2")]
 startPos = Array[Vector3i]([Vector3i(0, 1, 2), Vector3i(0, 1, 5)])
 endPos = Array[Vector3i]([Vector3i(11, 1, 2), Vector3i(11, 1, 5)])
 
-[node name="Env" type="Node3D" parent="."]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env"]
-transform = Transform3D(0.695743, -0.399572, 0.596895, -0.207606, 0.683665, 0.699644, -0.687635, -0.610691, 0.392702, 0, 2.18533, 0)
-light_color = Color(0.910956, 0.777794, 0.59601, 1)
-light_energy = 0.837
-shadow_enabled = true
-shadow_opacity = 0.6
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Env"]
-environment = SubResource("Environment_msfp5")
+[node name="Env" parent="." instance=ExtResource("2_f4jk3")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
