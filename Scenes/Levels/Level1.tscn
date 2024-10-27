@@ -150,6 +150,7 @@ script = ExtResource("7_ep0hu")
 speed = 4.0
 level = NodePath("..")
 
+[connection signal="home" from="CanvasLayer/LevelUi" to="." method="_on_home"]
 [connection signal="play" from="CanvasLayer/LevelUi" to="." method="_on_play"]
 [connection signal="select_item" from="CanvasLayer/LevelUi" to="." method="on_item_selected"]
 [connection signal="select_recycle" from="CanvasLayer/LevelUi" to="." method="on_recycle_selected"]

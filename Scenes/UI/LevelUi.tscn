@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cg1pgl7dxjhfj"]
+[gd_scene load_steps=10 format=3 uid="uid://cg1pgl7dxjhfj"]
 
 [ext_resource type="Script" path="res://Scripts/LevelUi.gd" id="1_o5y1v"]
 [ext_resource type="Texture2D" uid="uid://c7j8562i2squu" path="res://Resources/Icons/Rail.png" id="2_4guen"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://behbs0eihu0yi" path="res://Resources/Icons/Wrench.png" id="5_gl6k3"]
 [ext_resource type="Texture2D" uid="uid://b71b53dpq3yiu" path="res://Resources/Icons/Recycle.png" id="6_uaueb"]
 [ext_resource type="Texture2D" uid="uid://dv337bccpsgsb" path="res://Resources/Icons/Play.png" id="7_73w28"]
+[ext_resource type="Texture2D" uid="uid://c23ju0ubh7aqa" path="res://Resources/Icons/Home.png" id="9_gf8fa"]
 
 [node name="LevelUi" type="Control" node_paths=PackedStringArray("ItemBar")]
 layout_mode = 3
@@ -124,7 +125,23 @@ texture_normal = ExtResource("7_73w28")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="HomeButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -130.0
+offset_top = 50.0
+offset_right = -50.0
+offset_bottom = 130.0
+grow_horizontal = 0
+texture_normal = ExtResource("9_gf8fa")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="ItemBar/Rail" to="." method="on_item_click" binds= [0]]
 [connection signal="pressed" from="ItemBar/Tool" to="." method="on_item_click" binds= [-1]]
 [connection signal="pressed" from="ItemBar/Recycle" to="." method="on_item_click" binds= [-2]]
 [connection signal="pressed" from="TextureButton" to="." method="_on_play"]
+[connection signal="pressed" from="HomeButton" to="." method="_on_home"]

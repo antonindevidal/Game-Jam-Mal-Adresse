@@ -10,7 +10,7 @@ signal select_item(model : PackedScene)
 signal select_wrench()
 signal select_recycle()
 signal play
-
+signal home
 
 func on_item_click(index : int):
 	match index:
@@ -24,3 +24,7 @@ func on_item_click(index : int):
 
 func _on_play():
 	play.emit()
+
+
+func _on_home() -> void:
+	home.emit()

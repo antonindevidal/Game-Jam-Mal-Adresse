@@ -197,6 +197,10 @@ func _on_play():
 		train._add_new_dest(get_next_cell(train.startPos, train.startPos))
 		i+=1
 	is_playing = true
+	
+func _on_home():
+	get_tree().change_scene_to_packed(menu)
+	
 
 func norm2(vector: Vector3) -> float:
 	return sqrt((vector.x*vector.x)+(vector.x*vector.x)+(vector.x*vector.x))
