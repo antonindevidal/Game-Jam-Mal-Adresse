@@ -11,14 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://dtk687xnxl84i" path="res://Resources/UI/CGB02-red_S_btn.png" id="6_d22we"]
 [ext_resource type="Script" path="res://Scripts/LevelTrainAnim.gd" id="7_ep0hu"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsi74"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fx0d"]
 render_priority = 1
 transparency = 1
 albedo_texture = ExtResource("5_ua15c")
 billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_f8d37"]
-material = SubResource("StandardMaterial3D_gsi74")
+material = SubResource("StandardMaterial3D_6fx0d")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v73lr"]
 transparency = 1

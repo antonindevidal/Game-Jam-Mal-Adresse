@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b8bx813ilwcus"]
+[gd_scene load_steps=18 format=3 uid="uid://b8bx813ilwcus"]
 
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_ot7g6"]
 [ext_resource type="PackedScene" uid="uid://cg1pgl7dxjhfj" path="res://Scenes/UI/LevelUi.tscn" id="2_ei4y8"]
@@ -8,6 +8,33 @@
 [ext_resource type="MeshLibrary" uid="uid://dw50cqcq7qsnb" path="res://Resources/MeshLibrairy/RailsLibrary.tres" id="5_lijdp"]
 [ext_resource type="PackedScene" uid="uid://cyhls8uowy3xt" path="res://Resources/Models/Trains/train-diesel-a.glb" id="6_sn5qr"]
 [ext_resource type="Script" path="res://Scripts/LevelTrainAnim.gd" id="7_4a1uy"]
+[ext_resource type="Texture2D" uid="uid://dbe7qs1e4e82l" path="res://Resources/UI/CGB02-green_S_btn.png" id="9_kfno0"]
+[ext_resource type="Texture2D" uid="uid://dtk687xnxl84i" path="res://Resources/UI/CGB02-red_S_btn.png" id="10_iol2x"]
+[ext_resource type="Texture2D" uid="uid://3p1isfol1s4i" path="res://Resources/UI/CGB02-purple_S_btn.png" id="11_ghqv3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oy6sb"]
+render_priority = 1
+transparency = 1
+albedo_texture = ExtResource("9_kfno0")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_33d7e"]
+material = SubResource("StandardMaterial3D_oy6sb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jevl"]
+transparency = 1
+albedo_texture = ExtResource("10_iol2x")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_umlt8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nyti4"]
+transparency = 1
+albedo_texture = ExtResource("11_ghqv3")
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_ow83h"]
+material = SubResource("StandardMaterial3D_nyti4")
 
 [node name="Level2" type="Node3D" node_paths=PackedStringArray("trains")]
 script = ExtResource("1_ot7g6")
@@ -120,6 +147,40 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.1565, -2.38419e-07, -0.8285
 
 [node name="tree_pineRoundA8" parent="Map/Tree" instance=ExtResource("4_rnt0f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.59068, 7.15256e-07, -1.79137)
+
+[node name="UI" type="Node3D" parent="."]
+
+[node name="GreenStart" type="MeshInstance3D" parent="UI"]
+transform = Transform3D(1, 0, 0, 0, 0.949173, -0.314755, 0, 0.314755, 0.949173, 0.807, 2.5, 1.669)
+mesh = SubResource("QuadMesh_33d7e")
+skeleton = NodePath("../..")
+
+[node name="GreenEnd" type="MeshInstance3D" parent="UI"]
+transform = Transform3D(1, 0, 0, 0, 0.949173, -0.314755, 0, 0.314755, 0.949173, 11.2, 2.5, 1.669)
+mesh = SubResource("QuadMesh_33d7e")
+skeleton = NodePath("../..")
+
+[node name="RedEnd" type="MeshInstance3D" parent="UI"]
+transform = Transform3D(1, 0, 0, 0, 0.801859, -0.597514, 0, 0.597514, 0.801859, 11.2, 2.5, 4.75)
+material_override = SubResource("StandardMaterial3D_0jevl")
+mesh = SubResource("QuadMesh_umlt8")
+skeleton = NodePath("../GreenStart")
+
+[node name="RedStart" type="MeshInstance3D" parent="UI"]
+transform = Transform3D(1, 0, 0, 0, 0.949173, -0.314755, 0, 0.314755, 0.949173, 0.8, 2.5, 4.74799)
+material_override = SubResource("StandardMaterial3D_0jevl")
+mesh = SubResource("QuadMesh_umlt8")
+skeleton = NodePath("../GreenStart")
+
+[node name="PurpleStart" type="MeshInstance3D" parent="UI"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 2.5, 7.09012)
+mesh = SubResource("QuadMesh_ow83h")
+skeleton = NodePath("../..")
+
+[node name="PurpleEnd" type="MeshInstance3D" parent="UI"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2, 2.5, 7.09)
+mesh = SubResource("QuadMesh_ow83h")
+skeleton = NodePath("../..")
 
 [connection signal="play" from="CanvasLayer/LevelUi" to="." method="_on_play"]
 [connection signal="select_item" from="CanvasLayer/LevelUi" to="." method="on_item_selected"]
