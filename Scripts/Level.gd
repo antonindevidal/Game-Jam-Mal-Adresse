@@ -48,13 +48,20 @@ func _ready():
 	var i = 0
 	for train in trains:
 		train._set_start_dest(railGrid.map_to_local(startPos[i]))
+		train._stop_train()
+		train.rotation = Vector3(0,PI/2,0)
 		i +=1
+		
+	for cross in cross3Dir.keys():
+		cross3Dir[cross]  = false
+
+	is_playing = false
 	
 func _process(delta):
 	if is_playing :
 		var i = 0
 		for train in trains:
-			if(train.progress == 1):
+			if(train.progress == 1 and is_playing):
 				if(train.position ==  railGrid.map_to_local(endPos[i])):
 					train._stop_train()
 				else:
@@ -78,8 +85,9 @@ func _process(delta):
 		selected_item.position += offSet
 
 func _on_train_stuck_on_rail() -> void:
-	get_tree().reload_current_scene()
-
+	#get_tree().reload_current_scene()
+	_ready()
+	
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton && !is_playing:
